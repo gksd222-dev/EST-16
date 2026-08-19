@@ -1,0 +1,38 @@
+ctrl + shift + T : 번역
+!+tab : 기본양식
+##양식은 권고사항
+ctrl + shift + R : 강력 새로고침
+웹사이트 열고 F12 : 개발자도구화면?
+UTF-8 : 다국어라는 의미이다
+모바일 디버깅은 사파리가 유용하다
+"h1" + Tab 은 양식완성
+
+<html lang="ko"></html> : 주사용언어 설정
+<태그명 속성 값>
+<열림태그><닫힘태그>
+
+"ko-KR" : 한국중에서도 대한민국
+meta: 정보를 담고있다는 의미
+
+href : hyper text reference
+
+코드 좌우이동
+home 및 end 키
+노트북 : Fn <>(방향키)
+alt + shift 누르고 위아래 : 누르면 복사 실행
+shift + 마우스 클릭 : 모두선택
+
+여백은 css를 이용하여 만들어야 한다.
+
+<strong>과 <b>의 차이
+strong은 내용이 중요하다는 의미
+b(bring attention to)는 단순히 강조의 용도
+- 웹브라우져가 인지하기 때문에 중요하다.
+
+<em>는 강세표현
+<abbr>은 약어와 줄임말
+
+
+설치목록
+Halcyon theme :바탕색상 변경 더 잘보임
+Material Icon Theme : 아이콘이 좀더 잘보임
