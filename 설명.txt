@@ -36,3 +36,5 @@ b(bring attention to)는 단순히 강조의 용도
 설치목록
 Halcyon theme :바탕색상 변경 더 잘보임
 Material Icon Theme : 아이콘이 좀더 잘보임
+Live server : html 실행
+git : 
