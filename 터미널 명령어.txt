@@ -1,0 +1,6 @@
+git add .
+git commit
+git push
+git status
+
+git switch -c two 브랜치 생성 명령어

@@ -37,7 +37,14 @@ b(bring attention to)는 단순히 강조의 용도
 Halcyon theme :바탕색상 변경 더 잘보임
 Material Icon Theme : 아이콘이 좀더 잘보임
 Live server : html 실행
-git : 
+git history :
+error lens :
+auto close tag :
+htmlhint :
+korea language :
+prettier 
+toggle
+translator
 
 기능
 h1 크기를 기준으로 하는 것이 아님, 중요도에 따라
@@ -46,6 +53,8 @@ br 줄바꿈
 div는 division의 약어 : 블록컨텐츠를 나눈다
 - 같은 요소 X, 같은 성격끼리 묶어야한다.
 
+alt + l
+alt + o
 
 'html 유니코드' 인터넷 검색
 
@@ -159,3 +168,78 @@ button		입력 내용을 전송하거나 기능 실행
 fieldset / legend	관련 요소 묶음과 그룹 제목
 datalist		입력값에 추천 목록 제공
 output		계산 또는 처리 결과 표시
+
+label을 사용한다면 어떤 정보를 받는지 명확해야한다.
+
+id : html 문서에서 요소를 식별
+name : 폼을 제출할 때 데이터 이름으로 사용
+
+각자의 태그마다 정해진 속성이 있다.
+
+웹표준은 placeholder를 작성해주어야한다.
+
+readonly : 사용자 수정이 안되지만 전송은 해야할때
+
+반드시 HTTPS와 함께 사용해야한다.
+type="password" 만쓴다고 안전전송되는 것이 아님
+
+<input type="file" accept="image/*" multiple />
+accept로 파일 종류를 안내하고, multiple로 여러 파일을 선택하며, enctype="multipart/form-data"로 실제 전송합니다.
+PNG만 받겠다  accept="image/png"
+
+<input type="hidden" name="courseId" value="html-001" />
+자주 하는 실수: hidden input에 비밀번호나 결제 금액 같은 민감한 값을 그대로 넣는 경우가 있습니다. 
+화면에 안 보일 뿐 누구나 값을 확인할 수 있습니다.
+
+
+버튼태그는 기본적으로 제출기능을 가지고 있다. 즉, 항상 type을 입력해주어야 한다
+
+codepen  사이트에서 select box 선택
+
+<form> — 입력 양식 전체를 감싸는 요소
+사용자가 입력한 데이터를 하나로 묶어 서버로 전송하기 위한 영역입니다.
+
+GET의 특징
+-입력 데이터가 URL에 표시됩니다
+-URL을 복사하거나 공유할 수 있습니다
+-브라우저 방문 기록에 남을 수 있습니다
+-검색 · 필터 · 정렬처럼 조회에 적합합니다
+-비밀번호 등 민감한 정보 전송에는 사용하면 안 됩니다
+
+
+section : 영역 구분이 명확히 필요할 떄
+
+코드는
+header
+main
+footer
+등으로 구성하는 것이 좋다.
+
+피드백
+- 정보제공은 p태그사용
+- 사진명은 한글로 해주는게 좋다.
+- hr태그는 교육용도로 사용한 것이고 보통은 잘 안쓴다.
+
+img
+-loading="lazy"를 넣으면 브라우저가 이미지를 페이지 로드 시점에 바로 받지 않고, 
+사용자가 스크롤해서 그 이미지가 화면(뷰포트) 근처에 다가올 때 다운로드를 시작합니다.
+- 성능을 고려한다면 lazy를 사용하는 것이 좋으나 간단한 사이트에서는 큰 차이가 없다.
+- 화면에 바로 보이는 첫 이미지(예: 히어로 이미지)에는 lazy를 붙이지 않는 것이 좋습니다.
+
+
+자주 하는 실수: 이미지 안의 중요한 문구를 alt에 옮기지 않고 생략하는 경우가 흔합니다.
+- 모든 이미지안에 alt를 작성할 필요는 없고, p태그가 필요할 것 같다.
+- 복잡한 이미지도 설명이 필요하다.
+
+<다시들어보기>
+페이지전환 a태그
+
+버튼 상태 알리기 : aria-expanded
+삼선메뉴
+
+클릭 가능한 모든 div에 tabindex="0"을 붙이면서 정작 버튼이나 링크로 바꾸는 것은 
+고려하지 않는 경우가 많습니다.
+
+###정확한 디자인을 받아서 사용하는 것이 중요하다.
+
+어쩔수 없이 나눠야할 때는 div를 사용하여 나눠라

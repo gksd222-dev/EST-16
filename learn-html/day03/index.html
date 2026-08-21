@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="user-name">이름</label>
+
+      <input type="text" id="user-name" />
+
+      <hr />
+
+      <label for="male">남성</label>
+      <input type="radio" name="" id="male" />
+
+      <label for="female">여성</label>
+      <input type="radio" name="" id="female" />
+
+      <hr />
+
+      <label for="checkbox">동의합니다.</label>
+      <input type="text" name="" id="checkbox" />
+
+      <hr />
+
+      <label for="">
+        이름 :
+        <input type="text" />
+      </label>
+
+      <hr/>
+      <label for="city">남양주</label>
+      <input type="text" id="city" name="city" value="별내"/>
+
+      <hr/>
+
+      <label for="checkbox2">동의합니다.</label>
+      <input type="text" name="" id="checkbox2" checked/>
+
+      <hr/>
+
+      <label for="email">이메일</label>
+      <small>*필수입력사항 입니다.</small>
+      <input type="email" 
+        name="email" 
+        id="email" 
+        placeholder="gksd222@naver.com" 
+        required
+
+        readonly
+      />
+      
+      <!-- <button type="button">회원가입</button> -->
+      <input type="tel" placeholder="010-4534-6403"/>
+      <input type="search" placeholder="검색어를 입력하세요."/>
+
+      <hr/>
+
+      <input type="number" id="age" name="age" min="1" max="100" step="5"/>
+
+      <input type="range" id="volume" name="volume" min="0" max="100" value="20"/>
+
+      <input type="date" name="birthDate" />
+      <input type="time" name="meetingTime" />
+      <input type="datetime-local" name="reservation" />
+      <input type="month" name="startMonth" />
+      <input type="week" name="week" />
+
+      <hr/>
+
+      <input 
+      type="color" id="theme-color"
+      name="themeColor" value="A0000"/>
+
+      <input type="submit" value="가입하기"/>
+      <input type="reset" value="초기화"/>
+      <input type="button" value="로그인"/>
+
+      <button type="button">로그인</button>
+      <button type="button">제출</button>
+
+      <button type="button">로그인</button>
+
+      <!-- <div role="button" tabindex="8">로그인</div> -->
+
+      <hr/>
+      <label for="introduction">자기소개</label>
+      <textarea
+        id="introduction"
+        name="introduction"
+        rows="5"
+        cols="40">
+      </textarea>
+
+      <hr/>
+
+      <select id="city2" name="city2">
+        <optgroup label="경기도">
+          <option value="seoul">서울</option>
+          <option value="seoul">대전</option>
+          <option value="busan">부산</option>
+        </optgroup>
+      </select>
+
+      <hr/>
+      <fieldset>
+        <legend> 수강 수준</legend>
+        <label>
+          <input type="radio" name="level" value="beginner" /> 초급
+        </label>
+      </fieldset>
+
+      <form>
+        <label for="user-name2">이름</label>
+        <input type="submit" id="user-name2" name="userName2"/>
+        <button type="submit">가입하기</button>
+
+      </form>
+
+      <hr/>
+      <!-- <form>
+        <label for="user-name2">이름</label>
+        <input type="text" id="user-name2" name="userName2" />
+
+        <button type="submit">가입하기</button>
+      </form> -->
+
+      <hr/>
+
+      <form>
+        <label for="user-name2">이름</label>
+        <input type="text" id="user-name3" name="userName3" />
+
+        <label for="password2">비밀번호</label>
+        <input type="password" id="password2" name="q" />
+
+        <button type="submit">가입하기</button>
+      </form>
+
+
+    </div>
+  </body>
+</html>

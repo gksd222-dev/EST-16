@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>미디어태그를 알아보자!</title>
+</head>
+<body>
+  
+  <img
+        width="300"
+      src="./assets/study.jpg" 
+      alt="6명의 수강생이 책상에 앉아 서로 의견을 주고받는 모습"
+      loading="lazy"
+  />
+
+
+  <picture>
+    <source media="(max-width: 600px)" srcset="./assets/element_student.jpg" />
+    <source media="(max-width: 1100px)" srcset="./assets/sub.jpg" />
+    <img width="300px" src="./assets/study.jpg" alt="이하 생략 .."/>
+  </picture>
+
+  <video 
+    width="500px"
+    playsinline
+  
+    loop
+  >
+
+    <source
+      src="./assets/fish.mp4"
+    />
+  </video>
+
+  <hr/>
+
+  <figure>
+
+    <img width="300px" src="./assets/study.jpg" alt="이하생략.."/>
+    <figcaption>스터디를 하고 있는 모습</figcaption>
+
+  </figure>
+
+  <!-- <iframe width="560" height="315" src="https://ogs.google.com/u/0/widget/app?eom=1&awwd=1&em=2&scv=1&dpi=79508299&origin=https%3A%2F%2Fwww.google.com&cn=app&pid=1&spid=113&hl=en&xstg=CAMSiA4Vggmqs2yU8lnDgqIElAYpl92jAqiruwXcrEndkgWnWL1VMpYTuRHqHqQS1Qb6ApwBoRT2As0AFp4FwgX2BPEEIooG0gVIw4mCAvgXjgECqQj455QGsgTEBOfoBZWXDIcGtQYh3IwEtwP_BP6IWIjiG6T7IJIN9wO171u1iKUGrfE9o9WEBuPhF0yjBgbYutgO0bMO3ZQOoE7sMORZ5Db2Hi7hPqQe-zr0CJqWE8-FBaa4Hf_QC_HV6QMxxZbpA96WDNsMtvMakS7sXIhrl7IE-vDHBvCNHoDKFaSEBYOBBNHkCo5Dq8AbhtIC3iqZF4-0BscT1jexR3O0PbIFAP4axR-UT64ZkA6VHdAG9D-jA8gWwhfzAskB-hfzH5kDjxXWAL0GlwR0iQWaBZIIct8PvgqTE9kFqAHcCP4WgQ_OEdoFuQP-JeOMOo8GaQKPBJIAiQX9BZIFXoEFNfMDK04cC3MNv4kGQJUPpQCBBgz3AuEB-wbmDH-3AIgGqAJnDqeWAT_vBRqIBgABVn2agwWvC6gCgQTekxH3Sn5AwgxmjkeDBoEEIaQFehIbkQb8Ao0GOpYFODM1Q1o7rAUJBcUFrQYT0Qa-AvoGyAbRBGl0Tw6iBv0GnwVaFuUGpwXougaINtUDsQLnHtgE3wIFoRfgIlDCFMK3DZnNGKfpBNdTtKIN7DGpvzauzwWsyQH-iwTnBLvxZ5ABkgXMBZ8GsAL3A58FFa8B4AzoAaAL8A90AL0GrALsE8URFAv5A2fQACmTBrQNoA6DBj6OCZkOlQapAqgA_wSlC0P4AvsIuBzXCQUP6A_VCZEBlgbUDa8D1w7JBoIDwwWaBKwGlAbSANgG9hcaUp0GIY0PSOMIpAPBD5sDzwSKBkWYBOUW4wrnAMAPxw8JrgZvgwbsDbkEkAbQAXGjA9UPnQOCA8wE4QIj_wTkBpsFywlLjQaQBYgDzQY4rAUclwT6Do8E9waJCY0FzgXcA74EzAa7BLEN2AZU1AR2ewX6D-QMywbdAuEDBf8GZ5wV8xa6AMULyAbsBEzoBqcNtgaWA4kGDtwFsAaRA6cBBeYGjwaFpgbriQXbsxL47wWDnwXzkgOSbZaGBqBun8gNtN0F2JQFiJ0BsZEK4q0C36kBwMoE2AWznAXwAKGzA5lPk23C7AWJ5QS1NfWUBqGtBLuKApvqBpP8A6mFBbqhA8ND584FkM4F3PekA09Gqxi97AKrggYFpPwF-pQGhuEMApmCBdKgAuiABdxdx3D9hQTfOJoEuQ4F9zL7vATx8AWmmATPL9f0Brr9BpqfBdXOBQT5bt5fgS6atALw7Qbt4gaZxgYEhFGgqgSKkwTGEJQohd4BqAmjxgWoMZ-NAvOKBO-vBMKzBe-wBKYI73vXXLeUBpybBQusHcpfqfEF37IE7OIGvLgG9IACvZ8GpwSKqgbYngPPyAbhDPCWBQWT_wbhgwWLmwW4hAWRiwWqhAaDXJuXAfAR7KcEoDXANdqqBAXaqQbtGMQk8-oGuBzDrgXyE-cKpLUGvkXC2AblsgPkkAa_UgOkpgbRK403uOMG1FeoBaDoBdZOlwyhbfdclAbJlQX5DNOhBSG5hAOikgaMIcxAzosC6ZAF8ZIEBOmcA88x1qcG6AT1kwX2jQW4ogWTDdiABbK6Bp0NPPSHBquXBoq1Box6rhWNQq5ZtA2E0AS87QT1GizF9gWwb9scsxOaowbIW5c91muY0ASfCbBhtRb5ygbFN94xxyevIrnoBv0-_0PyD6IpuVy-HKnlBgWVYti3BvwG0jRO3GubkQP3QapbqZ8FvrIFwi29SpdB1vMGBbqiBcxEpY8ArSXlsgbUvgMKnmmrQuIfDMAUlBXabstXmpcGS6oCv_kF4DvdRp3sA9-yBf3LBqjpBcrAN-_0BvzNBck-tBaWIZaBBvAajBHLJIbXBtMzzlGOVdDlBswojBD_atYs3QusRucW3UnnQ7MGzgSqvAasDuVNrhejBPkOzi-6VsQjnUGqBQj0DfYbgCeLItIDxyOEAYsj4QLgBb4zyQOgEPUnuhWcH5EfhiyPCrMq0R7wApQE9AHuFN9SgQKUDKgWwAPLBp8G4B6CBNcFugbICLsNwgbbRt8EqSTVFL4Pqw-yFYQGwhTjNMYfgAOmF_AA3ACQIpMI5ReMAgzlDNEThhXY4hjGAfAA-AC6AFZU_wXZBKADzwaqBnnIBAEW7AYF6g4FanS7BsEPUo0GlgavAaMC7gLmAS6rDuMB_wE2ogrwD7oPb4ME8gnJBbMCuQSVBswCswXLDN0LoQLUAPYEsQaLAwwY_wY-xwZZW74G-QHOBaEFzAORBpgGsASNANAE3xSNAdwE8QCxAdEBS40PMNgGjQWvDpkEqAStBecElQWMCtwOqAMeANoGkws%3D" allowfullscreen></iframe> -->
+
+
+
+</body>
+</html>

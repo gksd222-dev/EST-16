@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>스터디신청 페이지</title>
+</head>
+<body>
+    <header>
+      <h1>스터디 소개 및 신청</h1>
+      <hr/>    
+      <h2>소개사진</h2>
+      <img width="200px" src="./assets/스터디사진.jfif" alt="스터디 팀원들이 스터디를 하는 사진입니다.">
+      <p>HTML 학습을 위한 스터디이며, 주제에 대한 토의 및 실습을 진행합니다.</p>
+      <hr/>
+    </header>
+    
+    <main>
+      <h2>작성양식</h2>
+      <form>
+
+          <label for="text">이름<strong>(필수)</strong></label>
+          
+          <input type="text" id="name" name="name" required/>
+          
+          
+
+
+          <label for="email">이메일<strong>(필수)</strong></label>
+         
+          <input type="email" id="email" name="email" required/>
+      </form>
+
+      <hr/>
+        
+        <fieldset>
+          <legend> HTML 학습경험 </legend>
+          <label>
+            <input type="radio" name="level" value="beginner" /> 처음 배웁니다.
+          </label>
+          <label>
+            <input type="radio" name="level" value="senior" /> 배운 경험이 있습니다.
+          </label>
+        </fieldset>
+
+      <hr/>
+
+    </main>
+    <footer style="border-color: gray">
+
+      개인정보 수집을 동의합니다. <input type="checkbox"/>
+      <hr/>
+      <div>
+      <button type="submit">제출하기</button> 
+      <p>(스터디 가입을 위한 버튼입니다.)</p>
+      </div>
+
+      
+    </footer>
+
+    <hr/>
+
+</body>
+</html>
