@@ -19,7 +19,7 @@
       <a href="#start">본문바로가기 </a>
         <h1>범쌤 온라인 클래스</h1>
        
-        <nav aria-label="">
+        <nav aria-label="start">
             <h2>주요 메뉴</h2>
             <ul>
                 <li>
@@ -47,7 +47,9 @@
                 <figcaption>HTML 강의를 들으며 실습하는 학생들</figcaption>
             </figure>
         </section>
+
         <hr/>
+
         <section id="curriculum">
             <h2>커리큘럼</h2>
             <ol>
@@ -58,7 +60,9 @@
                 <li> 미디어와 웹 접근성</li>
             </ol>
         </section>
+
         <hr/>
+
         <section id="preview">
             <h2>강의 미리보기</h2>
             <video 
@@ -77,6 +81,7 @@
 
             <p>HTML 강연을 들으며 학생들이 실습하는 모습</p>
         </section>
+
         <section id="register">
             <h2>수강 신청<strong>(필수)</strong></h2>
             <form method="post">
@@ -84,6 +89,8 @@
                     <legend>신청자 정보</legend>
                     <label for="user-name">이름<strong>(필수)</strong></label>
                     <input type="name" id="user-name" name="user-name" placeholder="안경찬" required/>
+
+                    <br/>
 
                     <label for="user-email">이메일<strong>(필수)</strong></label>
                     <input type="email" 
@@ -93,6 +100,9 @@
                       aria-describedby="email-help"
                       required
                       />
+                    <br/>
+                    <small id="email-help">수강 안내를 받을 이메일 주소를 입력해 주세요.</small>
+                    <br/>
 
                     <label for="user-tel">휴대폰 번호</label>
                     <input type="tel" 
@@ -100,7 +110,7 @@
                       id="user-tel"
                       placeholder="010-4534-6403"/>
 
-                    <p id="email-help">수강 안내를 받을 이메일 주소를 입력해 주세요.</p>
+                    
                 </fieldset>
                 
                 <fieldset>
@@ -119,13 +129,13 @@
                 <fieldset>
                   <legend>관심 있는 학습 주제</legend>
                   <label>
-                    <input type="checkbox" name="study topic" value="html" r/> HTML
+                    <input type="checkbox" name="study-topic" value="html" r/> HTML
                   </label>
                   <label>
-                    <input type="checkbox" name="study topic" value="web-accessibility" r/> 웹접근성
+                    <input type="checkbox" name="study-topic" value="web-accessibility" r/> 웹접근성
                   </label>
                   <label>
-                    <input type="checkbox" name="study topic" value="input-form" r/> 입력 양식
+                    <input type="checkbox" name="study-topic" value="input-form" r/> 입력 양식
                   </label>
                 </fieldset>
                 <label for="review">강사에게 남길 말</label>
@@ -139,9 +149,9 @@
                 <label for="ok">
                   개인정보 수집을 동의합니다. <input type="checkbox" id="ok" required/>
                 </label>
-
             </form>
         </section>
+
                 <br/>
                 <button type="submit">수강 신청하기</button>
                 <button type="reset">다시 작성하기</button>
@@ -155,7 +165,9 @@
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin">
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="범쌤 교육장 위치를 안내하는 구글 지도입니다."
+            >
           </iframe>
           
           <address>
@@ -167,6 +179,7 @@
         </section>
 
     </main>
+
     <footer>
       <small>Copyright 2026 범쌤 온라인 클래스</small>
     </footer>
@@ -174,3 +187,4 @@
 
 </body>
 </html>
+

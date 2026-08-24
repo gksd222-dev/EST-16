@@ -1,0 +1,151 @@
+h1 {
+  color: red;
+  background-color: yellow;
+  font-size: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(37, 54, 49);
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 10px;
+
+  li {
+    padding: 0.5rem;
+    position: relative;
+  }
+
+  
+  li::after {
+    content: '';
+    width: 0;
+    height: 6px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition:all .5s;
+  }
+}
+
+
+.warning {
+  color: red;
+}
+
+#box {
+  background-color: yellowgreen;
+}
+
+#text {
+  color: blueviolet;
+}
+
+.text {
+  color: hotpink;
+}
+
+/* 클래스 딥메뉴 안에있는 모든 li */
+.deep-menu {
+  background-color: orange;
+  > li {
+    background-color: hotpink;
+    > a {
+      background-color: green;
+      color: white;
+    }
+  }
+}
+
+/* 클래스 딥메뉴 안에있는 친자식 li만 선택 */
+/* .deep-menu > li {
+  background-color: peru;
+} */
+
+/* html * {
+  margin: 0;
+  padding: 0;
+} */
+
+/* 어바웃을선택하여 글짜색을 흰색으로 */
+
+.sibling h2 ~ p {
+  background-color: orange;
+}
+
+.deep-menu,
+.sibling,
+.another {
+  background-color: salmon;
+}
+
+button:not(.primary) {
+  background-color: red;
+}
+
+input[type='text'] {
+  border: 1px solid #ccc;
+}
+
+a[target='_blank'] {
+  color: orange;
+}
+
+.register > input[type='submit'] {
+  cursor: pointer;
+}
+
+/* pseudo 안에 있는 a에 마우스를 올렸을 때 */
+.pseudo {
+  width: 200px;
+  
+  background-color: yellow;
+  transition: all 0.5s;
+}
+
+/* pseudo에 마우스를 올렸을 때 a의 값이 변경 */
+.pseudo:hover {
+  background-color: tomato;
+}
+
+/* Hover event는 될 수 있으면 부모에게 주고 자식을 변경하는 */
+.pseudo:hover > a {
+  color: green;
+}
+
+.pseudo > a {
+  width: 100px;
+  height: 100px;
+  background-color: greenyellow;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+.pseudo > a:focus {
+  transform: translateX(100px);
+}
+
+.pseudo > a:focus {
+  outline: 2px solid blue;
+}
+
+/* .pseudo > ul > li:first-child { */
+.pseudo > ul > li:nth-child(even) {
+  background-color: hotpink;
+}
+
+.pseudo > ul {
+  background-color: orange;
+}
+
+.pseudo-element > h2 {
+  color: orange;
+}
+
+
+

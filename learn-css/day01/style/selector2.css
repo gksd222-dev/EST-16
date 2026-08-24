@@ -1,0 +1,45 @@
+/* .menu:not(primary) {
+  > li {
+    color: #2563eb;
+  }
+} */
+
+.menu {
+  border: 1px solid black;
+  > li {
+    color: #2563eb;
+  }
+}
+
+.menu > li ul {
+  color: black;
+}
+
+/* #font-weight {
+  color: 700px black;
+} */
+
+h2 + p {
+  color: dodgerblue;
+  font-weight: 700;
+}
+
+input[required] {
+  border: 10px solid red;
+}
+
+a[href^='http'] {
+  color: greenyellow;
+}
+
+a[href$='.pdf'] {
+  color: hotpink;
+}
+
+a[href*='google'] {
+  color: blue;
+}
+
+div[alt$='.pp'] {
+  background-color: orange;
+}

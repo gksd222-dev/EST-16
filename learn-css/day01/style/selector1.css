@@ -1,0 +1,28 @@
+h1 {
+  color: #ff4545;
+}
+
+.class-box {
+  background-color: #349eda;
+  color: white;
+}
+
+#id-box {
+  background-color: #54c741;
+  color: white;
+}
+
+.color-box {
+  border: 1px solid #c53cc3;
+  > a {
+    color: #e7d93f;
+  }
+}
+
+#color-list {
+  border: 1px solid #1fb2cd;
+  color: #1fb2cd;
+  > .point {
+    color: #ff871c;
+  }
+}
