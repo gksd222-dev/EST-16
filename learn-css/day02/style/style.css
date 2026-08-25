@@ -1,0 +1,142 @@
+
+
+html{
+  font-size: 20px;
+}
+
+:root{
+
+}
+
+
+/* 부모는 크기 설정이 없을 경우 자식들로부터 크기를 상속받습니다. */
+.box01{
+    border: 2px solid black;
+    font-size: 30px;
+    color: rgb(255, 89, 0);
+    /* height: 396px; */
+
+    p{
+        background-color: green;
+        width: 300px;
+        height: 500px;
+    }
+
+    a{
+        color: inherit;
+    }
+}
+
+p {color: gray !important;}
+p {color: blue;}
+
+
+body{
+    height: 5000px;
+
+}
+
+/* 
+<img> 태그
+- 부모에게 크기를 상속한다.
+- 사용자에게 정보 제공을 위해서 사용 (alt)
+- 1층에 배치
+
+background-image
+- 크기에 관여하지 않는다.
+- 정보 제공에 관여하지 않는다. (deco)
+- 이미지가 부모의 크기보다 작을 경우 이미지를 전체 반복
+- 지하층 배치
+- 이미지의 크기보다 부모의 크기가 작을 경우 이미지를 crop
+*/
+
+.box03{
+    width: 400px;
+    height: 400px;
+    border: 1px solid gray;
+    /* background-image: url('../assets/ham.jpg'); */
+    /* background-repeat: no-repeat; */
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-position: 50% 50%; */ /* x값, y값 */
+    /* background-position: center; */
+    /* background-size: contain; */
+    
+    /* 꽉차는 이미지 */
+    /* background-size: cover; */
+
+    /* background: dodgerblue url(../assets/ham.jpg) center / cover no-repeat;
+    background-attachment: fixed; */
+    /* background-image: radial-gradient(circle, white, yellow, orange, orangered, red, brown); */
+    /* background: linear-gradient(); */
+    background: #833AB4;
+    background: linear-gradient(205deg, rgba(131, 50, 100, 1) 0%, rgba(253, 29, 1, 1));
+    /* border-radius: 0 20px 30px 40px;
+    border-bottom: 10px solid red;
+    border-right: 10px solid gray; */
+    border-radius: 50%;
+}   
+
+.box03:hover{
+
+}
+
+@font-face {
+    font-family: 'pretendard';
+    src: url('../assets/fonts/') format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+.box04{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* 폰트, 폰트, 폰트의 종류 
+       1번폰트, 2번폰트없으면 3번째 종류의 폰트 아무거나 불러와라 라는뜻
+       fall-back font*/
+        font-family: "pretendard", sans-serif;
+        font-weight: 300;
+        line-height: 1.5; /*16px 곱 1.5 */
+        /* text-align: justify; */
+        /* text-align: center; */
+        /* text-decoration: underline; */
+        text-underline-offset: 2px;
+        text-transform: capitalize;
+        /* letter-spacing: 10px;
+        word-spacing: 10px; */
+        text-indent: 16px;
+        /* white-space: nowrap;
+        width: 240px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; */
+        display: -webkit-box; /*flexbox의 초기버전*/
+        overflow: hidden;
+        /* horizontal vertical */
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+
+        width: 300px;
+        transition:all .5s;
+
+    }
+
+    .box04:hover{
+        box-shadow: 5px 5px 9px 4px #000;
+    }
+
+    .box05{
+        /* position: static; */
+        /* height: 10vw; */
+        width: 50vw;
+        background-color: salmon;
+        text-shadow: 2px 2px 4px #000;
+
+        h2{
+            color: white;
+            font-size: clamp(2rem, 5vw, 5rem);
+        }
+    }
+
+

@@ -1,0 +1,33 @@
+.course-link{
+    color:#ef4444;
+}
+
+.apply-button:focus-visible{
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+input:checked{
+    accent-color: red;
+}
+
+button:disabled{
+    opacity:0.5;
+    cursor: not-allowed;
+}
+
+.notice{
+    /*배경만 투명도조정 */    
+    background-color:rgba(231, 176, 72, 0.875);
+
+    /* background-color: orange;
+    opacity: 0.5; */
+}
+
+.notice::before{
+    content: '📢';
+}
+
+.external::after{
+    content: '↗' ;
+}
