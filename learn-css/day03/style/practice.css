@@ -1,0 +1,39 @@
+
+
+main{
+    box-sizing: border-box;
+    background-color: white;
+    width: 500px;
+    height: 500px;
+}
+
+html{
+    font-size: 1rem;
+}
+
+body{
+    margin: 0;
+    font-family: "Noto Sans KR", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: antiquewhite;
+}
+
+ul{
+    list-style: none;
+}
+
+.profile-image{
+    border-radius: 50%;
+    width: 50%;
+    border: 1px solid black;
+}
+
+.profile-link{
+
+}
+
+.profile-button{
+    background-color: rgb(139, 146, 146);
+    color: black;
+}
