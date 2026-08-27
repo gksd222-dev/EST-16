@@ -413,6 +413,7 @@ x y축의 정가운데 정렬하는 방법
   position: absolute;
   left: 50%;
   top: 50%;
+  transform:translate(-50%,-50%);
 }
 
   left: 50%;
@@ -467,4 +468,89 @@ sticky
 top을 생략하면 고정 동작이 나타나지 않습니다.
 
 
+08/27
+부모인자가 transform을 가지고 있으면 아들은 transform이 안먹는다.
+margin-left 등을 사용하여 위치를 조정해줘야함.
 
+// mdn/컨테이닝 블록의 모든 것
+개발자를 위한 웹기술 > CSS > Guides > Display > 컨테이닝 블록의 모든 것
+
+float은 공중에 띄운다. 가로배치가 가능하다.
+flex는 안정적으로 가로배치가 가능하다.
+
+justify-content — 메인 축 정렬(가로 방향)
+
+flex-start		시작점에 정렬
+center		가운데 정렬
+flex-end		끝점에 정렬
+space-between	양 끝에 붙이고 사이 공간을 균등 분배
+space-around	각 아이템 주변 공간을 분배
+space-evenly	모든 간격을 동일하게 분배
+
+- center, space-between 을 가장 많이 사용
+
+align-items - 서브축(세로 방향)
+값	설명
+stretch	서브축 방향으로 늘어남
+flex-start	서브축 시작점
+center	서브축 가운데
+flex-end	서브축 끝점
+baseline	텍스트 기준선에 맞춤
+
+align-content : 컨텐츠끼리의 정렬
+
+gap 
+- 아이템 사이 간격
+- 방향별 간격도 설정가능
+ex)
+  row-gap: 20px;
+  column-gap: 32px;
+
+gap vs margin
+margin 방식은 마지막 요소의 마진을 별도로 제거해야 할 수 있습니다.
+gap을 사용하면 아이템 사이에만 간격이 만들어집니다.
+
+align-items = 각 아이템을 정렬
+align-content = 여러 줄(행)을 정렬
+
+flex는 부모에게 주는 속성과 자식에게 주는 속성이 다름
+
+flex-wrap : wrap
+컨테이너에 맞춰서 아이템을 내려준다.
+
+flex-shrink
+-공간이 부족할 때 아이템이 얼마나 줄어들지 정합니다. 
+-1은 줄어들 수 있다는 의미, 0은 줄어들지 않도록 설정합니다.
+
+flex-basis
+-Flex 아이템의 메인 축 방향 기본 크기를 지정합니다.
+-row에서는 기본 너비, column에서는 기본 높이처럼 작동합니다.
+
+flex 단축 속성
+여러 아이템에 flex: 1을 지정하면 사용할 수 있는 공간을 균등하게 나눕니다.
+ex)
+.item {
+  flex: 1;
+  /* 1  1   0 으로 배치하는 것을 의미함*/
+}
+.item {
+  flex: 1 1 200px;
+}
+/* flex: flex-grow flex-shrink flex-basis; */
+
+order를 이용하여 위치(순서)를 바꿔줄 수 있음
+개체의 order는 기본 0이다.
+
+display:flex;
+부모에게 부여하는 것.
+flex:1; 고정
+
+flex란?
+CSS에서 Flex의 기준이라고 하면 보통 주축(main axis)과 교차축(cross axis)을 
+무엇을 기준으로 정하느냐를 의미합니다.
+
+가운데에 오게 만드려면 해당컨텐츠의 부모를 찾아서 가로세로를 달아줘야함.
+
+body는 건들면 안된다. 반드시 다른태그로 감싸서 만들어줘야함
+
+header나 footer의 공간에 
