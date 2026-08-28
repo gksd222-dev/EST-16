@@ -1,0 +1,34 @@
+.dashboard{
+  min-height: 1000px;
+  display: flex;
+  justify-content: flex-start;
+
+  .sidebar{
+    background-color: orange;
+
+    width: 200px;
+    padding: 20px;
+    
+  }
+}
+main{
+  header{
+    width: 1000px;
+    height: 200px;
+    background-color: dodgerblue;
+    margin-bottom: 20px;
+  }
+  .cards{
+    display: flex;
+    height: 200px;
+    gap: 10px;
+    flex-wrap : wrap;
+    justify-content: space-between;
+    background-color: yellowgreen;
+
+  }
+  footer{
+    background-color: rgb(49, 48, 48);
+    height: 50px;
+  }
+}

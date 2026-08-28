@@ -568,8 +568,7 @@ CSS Grid는 요소를 행(Row)과 열(Column)을 기준으로 배치할 수 있�
 ctrl+p : 파일간 이동 
 
 fr은 fraction의 약자로, 사용 가능한 공간을 나누는 비율을 의미합니다.
-1:1:1 비율로 나눈다는 의미
-개체마다 fr을 할당해줘야 하는데, 개수가 늘어나면 불편함
+1:1:1 비율로 나눈다는 의미 개체마다 fr을 할당해줘야 하는데, 개수가 늘어나면 불편함
 
 이럴떄 repeat()함수 같은 값이 반복되고 있습니다. repeat() 함수
 ex) 둘은 같은 의미
@@ -589,17 +588,17 @@ auto-fit	비어 있는 열을 접습니다. 남은 아이템이 공간을 넓게
 auto-fill	가능한 빈 열의 자리도 유지합니다. 아이템이 적어도 열 구조를 남겨둡니다.
 
 Grid 핵심 정리
-display: grid          → Grid 시작
-grid-template-columns  → 열 만들기
-fr                     → 공간을 비율로 나누기
-repeat()               → 반복되는 열 줄여쓰기
-gap                    → Grid 사이 간격
-Grid Line              → Grid의 경계선 이해
-grid-column / grid-row → 시작과 끝 지정
-span                   → 몇 칸을 차지할지 지정
-minmax()               → 최소·최대 크기 지정
-auto-fit               → 공간에 따라 열 자동 구성
-justify / align / place → Grid 정렬
+display: grid          	→ Grid 시작
+grid-template-columns  	→ 열 만들기
+fr                     		→ 공간을 비율로 나누기
+repeat()               	→ 반복되는 열 줄여쓰기
+gap                    	→ Grid 사이 간격
+Grid Line              	→ Grid의 경계선 이해
+grid-column / grid-row 	→ 시작과 끝 지정
+span                   	→ 몇 칸을 차지할지 지정
+minmax()               	→ 최소·최대 크기 지정
+auto-fit               	→ 공간에 따라 열 자동 구성
+justify / align / place 	→ Grid 정렬
 
 
 
@@ -612,7 +611,8 @@ media query
 
 padding-inline, padding-black 등을 꼭 활용
 
-프론트 개발자는 json파일을 받아서 적용해야함. 근데 여러가지 가공을 해서 사용해야함 
+프론트 개발자는 디자이너로부터 json파일을 받아서 적용해야함. 
+근데 여러가지 가공을 해서 사용해야함 
 
 이미지 삽입시
 object-fit: cover; 를 입력하여 짜부되지 않도록 한다.
@@ -630,6 +630,6 @@ https://easings.net/ 사이트 참조
 
 transition: all 주의
 작성은 간단하지만 예상하지 않은 속성까지 애니메이션될 수 있습니다. 
-권장:변화시킬 속성을 명시하는 편이 좋습니다.
+권장:변화시킬 속성을 일일이 명시하는 편이 좋습니다.
 
 이미지 무빙에 따라 고급스럽게 보이기도 한다

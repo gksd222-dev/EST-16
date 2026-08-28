@@ -68,7 +68,9 @@
       background-color: white;
       border-radius: 1rem;
 
-
+      &:first-child{
+        grid-column: span 2;
+      }
     }
   }
 
