@@ -1,0 +1,108 @@
+/* 
+
+
+
+.dashboard{
+  
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+
+  .main{
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    background-color: dodgerblue;
+    padding: 20px;
+    gap: 20px;
+    .cards{
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      background-color: hotpink;
+    }
+    .contents{
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      background-color: yellowgreen;
+    }
+
+    .footer{
+      background-color: cyan;
+    }
+  }
+}
+ */
+
+
+.dashboard{
+  
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+
+}
+  .sidebar{
+    background-color: gray;
+    padding: 20px;
+    color: white;
+    /* @media (max-width: 800px){
+      .sidebar{
+        background-color: dodgerblue;
+      }
+    } */
+  }
+
+  .main{
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    background-color: rgb(241, 241, 241);
+  }
+
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .card{
+      /* display: grid; */
+      background-color: white;
+      border-radius: 1rem;
+
+
+    }
+  }
+
+  .contents{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+
+    .chart,
+    .info{
+      background-color: white;
+      border-radius: 1rem;
+    }
+  }
+
+  @media (max-width: 800px){
+
+    .dashboard{
+      grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+      background-color: dodgerblue;
+    }
+
+    .cards{
+      grid-template-columns: 1fr;
+    }
+
+    .card:first-child{
+      grid-column: 1/1;
+    }
+
+    .contents{
+      grid-template-columns: 1fr;
+    }
+  }
