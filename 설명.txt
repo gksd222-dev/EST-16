@@ -636,10 +636,11 @@ transition: all 주의
 
 08/31
 복습 day5 카드 실습물 애니적용
+
 transform-origin 는 회전의 중심을 설정
 tranform 함수는 여러개 열거하면 가장 아래것만 적용, 따라서 한줄에 열거해줘야함.
 transform: skew(30deg) rotate(360deg) translate(100px);
--애니매이션을 설정하는 경우에는 translate를 사용해줘야함
+
 
 가독성을 높이려면 보통 2~3단계 이내로 유지하는 것을 권장한다.
 
