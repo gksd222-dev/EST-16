@@ -633,3 +633,32 @@ transition: all 주의
 권장:변화시킬 속성을 일일이 명시하는 편이 좋습니다.
 
 이미지 무빙에 따라 고급스럽게 보이기도 한다
+
+08/31
+복습 day5 카드 실습물 애니적용
+transform-origin 는 회전의 중심을 설정
+tranform 함수는 여러개 열거하면 가장 아래것만 적용, 따라서 한줄에 열거해줘야함.
+transform: skew(30deg) rotate(360deg) translate(100px);
+-애니매이션을 설정하는 경우에는 translate를 사용해줘야함
+
+가독성을 높이려면 보통 2~3단계 이내로 유지하는 것을 권장한다.
+
+has 는 if라고 생각하면 된다. 조건문처럼
+
+사람들이 왜 피그마를 많이 쓰고 있을까?
+
+Component Driven Development : 부품단위 개발
+React는 부품을 단위별로 개발한다.
+
+컴포넌트 자체 반응형 -> Container Query
+
+fullpage.js 페이지 참고
+
+;은 꼭 들어가야한다
+
+@layer를 이용하여 우선순위를 정해준 것, 오른쪽으로 갈수록 우선순위가 높다.
+- 그러나 가장 우선 순위가 높은 것은 파일안의 내용
+
+https://caniuse.com/
+대상에 대한 사용설명, 프로젝트에 사용시 알아보고 사용할 것
+

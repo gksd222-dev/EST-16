@@ -1,0 +1,197 @@
+@layer reset, base, components;
+/*우선 순위를 정해준 것, 오른쪽으로 갈수록 우선순위가 높다.*/
+@import url("../../reset.css") layer(reset);
+@import url("./base.css") layer(base);
+@import url("./components.css") layer(components);
+
+dialog {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 300ms,
+    transform 300ms;
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+:root{
+  --primary: dodgerblue;
+  --spacing-4: 16px;
+}
+
+.button{
+  background-color: var(--primary);
+}
+
+.option{
+
+    border: var(--spacing-4) solid gray;
+    padding: var(--spacing-4);
+}
+
+.option.active{
+  border: 1px solid red;
+}
+
+.option:has(input:checked) {
+  border-color: blue;
+  background: #eef4ff;
+}
+
+hr{
+  margin: 3rem 0;
+}
+
+.container{
+  border: 1px solid black;
+  .boxes{
+    width: 200px;
+    height: 200px;
+    /* anchor-name: --box; */
+  }
+}
+
+.wrapper{
+  width: 500px;
+  border: 1px solid black;
+  /* container-type: inline-size;
+  container-name: wrapper; */
+  container: wrapper / inline-size;
+
+  .boxes{
+    width: 25cqw;
+    height: 200px;
+  }
+}
+
+.box01{
+  background-color: dodgerblue;
+  
+}
+
+/* @media (width < 800px) {
+  .box01{
+    background-color: hotpink;
+  }
+
+} */
+
+@container wrapper (width < 300px) {
+  .box01{
+    background-color: hotpink;
+  }
+}
+
+section{
+  container-type: inline-size;
+}
+
+@container{
+  h2{
+    background-color: orange;
+  }
+}
+
+.scroll-container{
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 80px;
+}
+
+section{
+  height: 100vh;
+  border: 1px solid black;
+  scroll-snap-align: start;
+
+  &:nth-child(2){
+    background-color: gray;
+  }
+} 
+
+.progress{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 10px;
+  background-color: red;
+  width: 100vw;
+  z-index: 10;
+  transform-origin: left;
+  animation: progress linear;
+  animation-timeline: scroll();
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+section{
+  height: 100vh;
+
+  .box{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+}
+
+
+.card {
+  animation: reveal linear;
+
+  animation-timeline: view();
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.help-button {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background-color: dodgerblue;
+  color: white;
+
+  anchor-name: --help;
+}
+
+.tooltip {
+  position: absolute;
+  position-anchor: --box;
+  position-area: right;
+  /* right: 30px; */
+  margin-left: -10px;
+  margin-top: 10px;
+}
+
+textarea{
+  field-sizing: content;
+  min-height: 100px;
+  max-height: 400px;
+}

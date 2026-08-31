@@ -1,0 +1,186 @@
+body{
+  background-color: aliceblue;
+}
+.site-header{
+  position: sticky;
+  top:0;
+  z-index: 10;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+
+  .header-inner{
+    max-width: 1200px;
+    /* background-color: skyblue; */
+    min-height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .logo{
+    color: dodgerblue;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .navigation{
+    display: flex;
+    gap: 1.5 rem;
+    font-weight: 700;
+    gap: 3rem;
+
+
+
+    /* @media (max-width: 800px){
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-start; 
+      gap: 10px;
+    } */
+  }
+}
+
+.main-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-block: 64px;
+  padding-inline: 2rem;
+  background-color: antiquewhite;
+
+}
+
+.section-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  
+  h1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+
+
+  .eyebrow,
+  .more-link{
+    color: dodgerblue;
+    font-weight: bold;
+  }
+
+}
+
+
+.card-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:24px;
+}
+
+.course-card{
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: left top;
+  /* position: relative;
+  left: 0; */
+}
+
+.card-thumbnail{
+
+  position: relative;
+
+  img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.card-list:hover .card-content{
+  transform:scale(1.5);
+}
+
+.badge{
+  padding: 6px 10px;
+  background-color: dodgerblue;
+  color:white;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+
+
+.category{
+  color: dodgerblue;
+  font-weight: bold;
+}
+
+h2
+
+.card-content{
+  padding: 24px;
+
+}
+
+.card-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .price{
+
+  }
+  .course-link{
+    border: 1px solid gray;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+  }
+}
+/* .card-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:24px;
+  .course-card{
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .badge{
+      background-color: dodgerblue;
+      color: white;
+      border-radius: 5px;
+    }
+    border:1px solid black;
+
+    .card-content{
+      background-color: white;
+      .category{
+        color: rgb(30, 53, 255);
+        margin-bottom: 5px;
+      }
+      h2{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .description{
+        font-size: 1rem;
+      }
+
+
+    }
+  }
+} */
