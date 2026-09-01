@@ -1,0 +1,26 @@
+.course-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: white;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.course-card .title {
+  color: #2563eb;
+}
+
+.course-card .button {
+  background: #2563eb;
+  color: white;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

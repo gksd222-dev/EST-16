@@ -663,3 +663,52 @@ fullpage.js 페이지 참고
 https://caniuse.com/
 대상에 대한 사용설명, 프로젝트에 사용시 알아보고 사용할 것
 
+09/01
+Sass와 SCSS는 무엇이 다른가?
+- Sass 자체가 근본이다. 가장 먼저나온 언어이다.
+- Sass는 기술 및 언어의 이름이며, Sass에는 두 가지 주요 문법이 존재합니다
+
+json(JavaScript Object Notation)
+package.json 
+
+npm(node package management)
+- 많은 패키지들을 모아놓는 것
+- 패키지를 모아놓은 도서관이 있다고 해보자
+- 도서관에서 가져올때는 수기로 세부사항을 작성하여 빌려온다
+
+터미널 창에 아래와 같이 입력해준다.
+npm install sass
+-특정 프로젝트에 설치해야함.
+ex) npx sass scss/style.scss css/style.css
+- 특정 경로의 scss 파일을 css파일로 변환
+- npx를 사용해야함
+- npx를 사용하여 도서관의 sass를 실행할 수도 있다.
+
+npm install --global
+- 내컴퓨터에 저장한다. 
+- 수기가 남지 않는다.
+- 나에겐 편리하지만 다른 사람들에게 불편할 수 있다.
+
+style.css.map은 무엇이고 왜 생기는가?
+- map 파일은 경로를 정확하게 알려주는 기능
+
+폴더 전체를 watch 하는 방법
+- npx sass --watch scss:css : 파일 경로를 입력해야함
+
+npx add-gitignore
+- 변경파일이 너무 많을 때 그대로 커밋하면 안됨
+- node, visualstudiocode, windows, macos
+- npx add-gitignore macos windows node visualstudioncode
+
+남의 파일을 받았으면 패키지부터 다운로드 받아야 한다.
+- npm install : 
+
+github에 단축키가 있음
+
+Sass의 대표적인 기능 중 하나가 Nesting입니다.
+
+- 과거에는 Sass 파일을 연결하기 위해 @import를 많이 사용했습니다. 
+- 하지만 현재 Sass에서는 @import 방식이 deprecated 되었습니다.
+- 이름이 같으면 실행이 안됬다. 지금은 Namespace를 사용
+
+Sass에는 훨씬 다양한 기능이 존재합니다. 그러나 꼭 필요한지는 모르겠다.

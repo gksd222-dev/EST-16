@@ -1,0 +1,36 @@
+
+// :root{
+//     --primary:dodgerblue
+// }
+
+
+// $primary: dodgerblue;
+// $secondary: orange;
+
+
+// .title{
+//   color: $primary;
+//   background-color: $secondary;
+  
+// }
+
+$primary: dodgerblue;
+
+.course-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: white;
+}
+.course-card:hover { transform: translateY(-4px); }
+.course-card .title { color: #2563eb; }
+.course-card .button { background: #2563eb; color: white; }
+
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal{
+  @include flex-center
+}
