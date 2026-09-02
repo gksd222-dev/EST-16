@@ -1,36 +1,39 @@
+@use './components/button';
+@use './components/course-card';
+@use './abstracts/variables' as var;
 
-// :root{
-//     --primary:dodgerblue
-// }
+.course-section{
+  padding: var.$spacing-4xl var.$spacing-lg;
+  background-color: var.$color-background;
+  &__inner{
+    width: min(100%, 1120px);
+    margin: 0 auto;
+  }
 
+  &__header{
+    margin-bottom: var.$spacing-2xl;
+  }
 
-// $primary: dodgerblue;
-// $secondary: orange;
+  &__eyebrow{
+    display: inline-block;
+    margin-bottom: var.$spacing-md;
+    color: var.$color-primary;
+    font-weight: 700;
+  }
 
+  &__title{
+    margin: 0 0 var.$spacing-md;
 
-// .title{
-//   color: $primary;
-//   background-color: $secondary;
-  
-// }
+    font-size: var.$body-2xl;
+    letter-spacing: -0.04em;
+  }
 
-$primary: dodgerblue;
+  &__description{
+    max-width: 600px;
+    margin: 0;
+    color: var.$color-muted;
+    font-size: var.$body-l;
+    line-height: 1.7;
+  }
 
-.course-card {
-  padding: 24px;
-  border-radius: 16px;
-  background: white;
-}
-.course-card:hover { transform: translateY(-4px); }
-.course-card .title { color: #2563eb; }
-.course-card .button { background: #2563eb; color: white; }
-
-@mixin flex-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal{
-  @include flex-center
 }

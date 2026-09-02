@@ -669,7 +669,7 @@ Sass와 SCSS는 무엇이 다른가?
 - Sass는 기술 및 언어의 이름이며, Sass에는 두 가지 주요 문법이 존재합니다
 
 json(JavaScript Object Notation)
-package.json 
+package.json
 
 npm(node package management)
 - 많은 패키지들을 모아놓는 것
@@ -712,3 +712,21 @@ Sass의 대표적인 기능 중 하나가 Nesting입니다.
 - 이름이 같으면 실행이 안됬다. 지금은 Namespace를 사용
 
 Sass에는 훨씬 다양한 기능이 존재합니다. 그러나 꼭 필요한지는 모르겠다.
+
+블록요소와 인라인요소의 정렬차이
+-인라인 요소는 flex center를 이용
+
+
+<span>, <a>는 in-line 요소 
+block 요소처럼 크기, 마진 적용이 불가능
+
+css그래디언트 참조
+부트스트랩(https://getbootstrap.kr/)
+
+프레임워크 vs 라이브러리
+프레임워크: 틀을 정해놓고 하는 것
+라이브러리: 내가 자유롭게 선택하여 구성하는 것 
+
+react는 라이브러리에 가깝습니다.
+
+bootstrap은 reset을 내장하고 있다.

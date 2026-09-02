@@ -149,9 +149,6 @@
   .description{
     color:rgb(83, 83, 83)
   }
-  
-
-  
 }
 
 
@@ -168,6 +165,7 @@
   .price{
 
   }
+  
   .course-link{
     border: 1px solid gray;
     padding: 0.3rem 0.7rem;
