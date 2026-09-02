@@ -4,15 +4,144 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+     rel="stylesheet"
+     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" 
+     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"></script>
+    <style>
+      body {
+        height: 30000px;
+      }
+      .custom-card {
+        border: 2px solid red;
+      }
+    </style>      
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
 
-  <h2>hello Bootstrap!</h2>
 
-  <button class="btn btn-primary btn-lg">Primary</button>
-  <button class="btn btn-secondary">Secondary</button>
-  <button class="btn btn-success">Success</button>
-  <button class="btn btn-danger">Danger</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-md-4">column</div>
+      <div class="col-12 col-md-6 col-md-4">column</div>
+    </div>
+  </div>
+  <div class="d-none d-md-block">hello</div>
+
+  <div class="card" style="width: 18rem">
+    <img 
+    src="https://lh3.googleusercontent.com/pw/AP1GczPE_oJsHAyC9d8i4olH8plMQ6upVkt8HXUYy4_9Rlk6NengI4K9Jh8tuFTJAN5S-uMBvkcMR-ps_5yrJ6OJyat_4CaTbFczfmZ1iZ0eAkFuHpic6arCfr6V4ysx2mXbSVS059q6XV9zKWWIBXsiFGw1Ug=w1280-h1280-s-no-gm?authuser=0" 
+    alt=""
+    />
+    <div class="card-body">
+      <h5 class="card-title">Frontend Course</h5>
+      <p class="card-text">HTML과 CSS를 학습합니다.</p>
+      <a href="#" class="btn btn-primary">자세히 보기</a>
+    </div>
+  </div>
+  
+  <hr/>
+  <div class="card w-50 m-auto custom-card">
+    <div class="card-body">
+      <h5 class="card-title mb-4 text-primary fw-bold">로그인</h5>
+      <hr/>
+      <div>
+        <label class="form-label" for="email" >이메일</label>
+        <input class="form-control" id="email"/>
+      </div>
+
+    
+    <div class="mb-4">
+        <label class="form-label" for="password">password</label>
+        <input class="form-control" id="password" type="password" />
+
+    </div>
+    <button type="button" class="btn btn-primary w-100">login</button>
+    </div>
+  </div>
+
+  <div class="container p-5">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="collapse"
+      data-bs-target=".info,.info2"
+    >
+      강의 정보 보기
+    </button>
+  </div>
+
+  <div class="collapse mt-3 info" id="info">
+    <div class="card card-body">
+      HTML, CSS, Bootstrap을 활용하여 반응형 웹 페이지를 제작합니다.
+    </div> 
+  </div>
+
+  <h2 class="info">hello</h2>
+
+  <h2 class="info2">hello world</h2>
+
+  <hr/>
+
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#courseModal"
+  >
+    강의 정보
+  </button>
+
+  <div class="modal fade" id="courseModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">강의 정보</h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="닫기"
+          >
+
+          </button>
+        </div>
+        <div class="modal-body">HTML, CSS, Bootstrap을 배울 수 있는 강의입니다.</div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
