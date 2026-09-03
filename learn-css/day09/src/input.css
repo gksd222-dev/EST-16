@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --color-sim: #ff0000;
+}
+
+.text-custom{
+  @apply text-sm font-semibold text-blue-600 mb-3;
+}
+
+.image {
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.8)
+    );
+}
+
+.badge{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+
+}
+
+.hover {
+  transform: translateY(-4px);
+  box-shadow: 2px 3px 5px 3px white;
+}

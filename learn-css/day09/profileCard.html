@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css"/>
+</head>
+<body class="bg-black mt-3 ml-3">
+  <div class="text-red-600 font-bold mb-2 tracking-[0.3em]">TAILWIND CSS PRACTICE 01</div>
+  <div class="text-white text-4xl font-bold mb-2">Movie Card</div>
+  <div class="text-gray-400 mb-4">이미지, 오버레이, absolute positioning, group-hover, transition을 활용해 스트리밍 서비스 스타일의
+    <br/>콘텐츠 카드를 만들어봅니다.
+  </div>
+  <article 
+  class="
+    relative
+    aspect-[4/5]
+    max-w-sm
+    overflow-hidden
+    rounded-2xl
+    bg-zinc-900
+    p-5
+    
+  "
+  >
+
+    <img 
+      src="./assets/poster-no logo.jfif"
+      alt="영화 극한직업 포스터"
+      class="
+        absolute
+        inset-0
+        h-full
+        w-full
+        object-cover
+        "
+    />
+    
+    <div
+      class="
+        absolute
+        inset-0
+        bg-linear-to-t
+        from-black
+        via-black/25
+        to-transparent
+        hover
+        "
+    >
+      <div class="absolute left-4 top-4 flex items-center gap-2 ">
+        <span
+          class="
+            rounded-md
+            text-white
+            bg-red-600
+            px-2.5
+            py-1
+            text-xs
+            font-black
+          
+        ">
+        TOP 10
+        </span>
+        <span
+          class="
+            rounded-md
+            text-white
+            bg-black
+            px-2.5
+            py-1
+            text-xs
+            font-black
+          
+        ">
+          +15
+        </span>
+      </div>
+      
+      <div class="absolute inset-x-0 bottom-0 p-5">
+        <p class="text-xs font-bold uppercase tracking-[0.18em] text-red-400">
+          Original Series
+        </p>
+        <h2 class="text-3xl font-black tracking-tight text-white mb-2">
+          EXTREME JOB
+        </h2>
+        <div class="text-white">
+          <span class="text-green-500">
+            98% 일치
+          </span>
+           2026
+        <span
+          class="
+            rounded-md
+            text-white
+            bg-light
+            px-1.5
+            py-0.5
+            text-xs
+            font-bold
+            border-white
+            border
+        ">
+          HD
+        </span>
+
+        <div class="mt-2">
+           닭을 잡을 것인가
+        </div>
+        <div class="ml-6">
+          범인을 잡을 것인가
+        </div>
+        
+        
+        </div>
+      </div>
+    </div>
+      <!-- <div class="overlay"></div> -->
+
+
+  </article>
+
+
+
+
+</body>
+</html>
