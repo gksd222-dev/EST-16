@@ -1,0 +1,353 @@
+<body class="min-h-screen bg-[#09090b] text-white">
+  <main class="mx-auto max-w-7xl px-5 py-14 md:px-8">
+
+    <header class="mb-10">
+      <p class="text-sm font-bold uppercase tracking-[0.22em] text-violet-400">
+        Tailwind CSS · Practice 02
+      </p>
+
+      <h1 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">
+        Trending Now
+      </h1>
+
+      <p class="mt-3 max-w-2xl text-sm leading-6 text-zinc-400 md:text-base">
+        첫 번째 Movie Card에서 익힌 패턴을 활용해
+        여러 개의 콘텐츠 카드를 반응형 목록으로 확장합니다.
+      </p>
+    </header>
+
+    <section>
+      <div class="mb-7 flex items-end justify-between gap-4">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-violet-400"> Solo Practice </p>
+
+          <h2 class="mt-2 text-2xl font-bold"> 지금 인기 있는 콘텐츠 </h2>
+
+          <p class="mt-2 text-sm text-zinc-400"> 콘텐츠의 순위, 상태, 메타 정보, 설명과 Hover Action을 구성해보세요. </p>
+        </div>
+
+        <a href="#"
+          class="hidden text-sm font-semibold text-zinc-400 transition hover:text-white sm:block"
+        > 전체 보기 → </a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+
+        <article class="group cursor-pointer">
+          <div class="relative aspect-[2/3] overflow-hidden rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85"
+              alt="자연 풍경 콘텐츠"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+            />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent"></div>
+
+            <div class="absolute left-3 top-3 flex items-center gap-1.5">
+              <span class="rounded bg-red-600 px-2 py-1 text-[10px] font-black">
+                TOP 10
+              </span>
+
+              <span class="rounded bg-black/55 px-2 py-1 text-[10px] font-semibold">
+                NEW
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-6xl font-black italic leading-none text-white/90 drop-shadow-lg">
+                1
+              </span>
+
+              <div class="mt-3 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex gap-2">
+                  <button
+                    type="button"
+                    aria-label="Beyond Earth 재생"
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm text-black"
+                  >
+                    ▶
+                  </button>
+
+                  <button
+                    type="button"
+                    aria-label="Beyond Earth 찜하기"
+                    class="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-400 bg-black/40 text-lg"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="truncate font-bold">Beyond Earth</h3>
+              <span class="shrink-0 text-xs font-bold text-emerald-400">98%</span>
+            </div>
+
+            <div class="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11px] text-zinc-500">
+              <span>2026</span>
+              <span>•</span>
+              <span>12부작</span>
+              <span class="rounded border border-zinc-700 px-1 py-0.5">HD</span>
+            </div>
+
+            <p class="mt-2 line-clamp-2 text-xs leading-5 text-zinc-400">
+              미지의 행성에서 발견된 신호를 따라가는 탐사대의 이야기.
+            </p>
+          </div>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="relative aspect-[2/3] overflow-hidden rounded-xl bg-zinc-900">
+            <img
+              src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=85"
+              alt="사막 콘텐츠"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+            />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent"></div>
+
+            <div class="absolute left-3 top-3">
+              <span class="rounded bg-black/55 px-2 py-1 text-[10px] font-semibold backdrop-blur">
+                15+
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-6xl font-black italic leading-none text-white/90 drop-shadow-lg">
+                2
+              </span>
+
+              <div class="mt-3 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex gap-2">
+                  <button
+                    type="button"
+                    aria-label="The Last Road 재생"
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm text-black"
+                  >
+                    ▶
+                  </button>
+
+                  <button
+                    type="button"
+                    aria-label="The Last Road 찜하기"
+                    class="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-400 bg-black/40 text-lg"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="truncate font-bold">The Last Road</h3>
+              <span class="shrink-0 text-xs font-bold text-emerald-400">94%</span>
+            </div>
+
+            <div class="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11px] text-zinc-500">
+              <span>2025</span>
+              <span>•</span>
+              <span>2h 04m</span>
+              <span class="rounded border border-zinc-700 px-1 py-0.5">4K</span>
+            </div>
+
+            <p class="mt-2 line-clamp-2 text-xs leading-5 text-zinc-400">
+              끝없이 이어지는 도로 위에서 서로의 비밀을 마주한 두 사람.
+            </p>
+          </div>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="relative aspect-[2/3] overflow-hidden rounded-xl bg-zinc-900">
+            <img
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=85"
+              alt="산 콘텐츠"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+            />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent"></div>
+
+            <div class="absolute left-3 top-3">
+              <span class="rounded bg-violet-600 px-2 py-1 text-[10px] font-black">
+                DOCU
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-6xl font-black italic leading-none text-white/90 drop-shadow-lg">
+                3
+              </span>
+
+              <div class="mt-3 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex gap-2">
+                  <button
+                    type="button"
+                    aria-label="Summit 재생"
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm text-black"
+                  >
+                    ▶
+                  </button>
+
+                  <button
+                    type="button"
+                    aria-label="Summit 찜하기"
+                    class="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-400 bg-black/40 text-lg"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="truncate font-bold">Summit</h3>
+              <span class="shrink-0 text-xs font-bold text-emerald-400">91%</span>
+            </div>
+
+            <div class="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11px] text-zinc-500">
+              <span>2026</span>
+              <span>•</span>
+              <span>6 Episodes</span>
+              <span class="rounded border border-zinc-700 px-1 py-0.5">HD</span>
+            </div>
+
+            <p class="mt-2 line-clamp-2 text-xs leading-5 text-zinc-400">
+              세계에서 가장 험한 산을 오르는 사람들의 선택과 기록.
+            </p>
+          </div>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="relative aspect-[2/3] overflow-hidden rounded-xl bg-zinc-900">
+            <img
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=85"
+              alt="숲 콘텐츠"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+            />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent"></div>
+
+            <div class="absolute left-3 top-3">
+              <span class="rounded bg-red-600 px-2 py-1 text-[10px] font-black text-[10px] font-black">
+                TOP 10
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-6xl font-black italic leading-none text-white/90 drop-shadow-lg">
+                4
+              </span>
+
+              <div class="mt-3 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex gap-2">
+                  <button
+                    type="button"
+                    aria-label="Silent Forest 재생"
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm text-black"
+                  >
+                    ▶
+                  </button>
+
+                  <button
+                    type="button"
+                    aria-label="Silent Forest 찜하기"
+                    class="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-400 bg-black/40 text-lg"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="truncate font-bold">Silent Forest</h3>
+              <span class="shrink-0 text-xs font-bold text-emerald-400">89%</span>
+            </div>
+
+            <div class="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11px] text-zinc-500">
+              <span>2026</span>
+              <span>•</span>
+              <span>8부작</span>
+              <span class="rounded border border-zinc-700 px-1 py-0.5">18+</span>
+            </div>
+
+            <p class="mt-2 line-clamp-2 text-xs leading-5 text-zinc-400">
+              지도에도 없는 숲에서 시작된 실종 사건을 추적하는 미스터리.
+            </p>
+          </div>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="relative aspect-[2/3] overflow-hidden rounded-xl bg-zinc-900">
+            <img
+              src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=700&q=85"
+              alt="해질녘 자연 콘텐츠"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+            />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent"></div>
+
+            <div class="absolute left-3 top-3">
+              <span class="rounded bg-blue-600 px-2 py-1 text-[10px] font-black">
+                NEW
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-6xl font-black italic leading-none text-white/90 drop-shadow-lg">
+                5
+              </span>
+
+              <div class="mt-3 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex gap-2">
+                  <button
+                    type="button"
+                    aria-label="Unknown 재생"
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm text-black"
+                  >
+                    ▶
+                  </button>
+
+                  <button
+                    type="button"
+                    aria-label="Unknown 찜하기"
+                    class="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-400 bg-black/40 text-lg"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="truncate font-bold">Unknown</h3>
+              <span class="shrink-0 text-xs font-bold text-emerald-400">87%</span>
+            </div>
+
+            <div class="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11px] text-zinc-500">
+              <span>2026</span>
+              <span>•</span>
+              <span>1h 48m</span>
+              <span class="rounded border border-zinc-700 px-1 py-0.5">HD</span>
+            </div>
+
+            <p class="mt-2 line-clamp-2 text-xs leading-5 text-zinc-400">
+              기억을 잃은 채 깨어난 남자가 자신의 흔적을 역으로 추적한다.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+</body>

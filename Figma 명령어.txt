@@ -1,0 +1,47 @@
+확대 및 축소
+ctrl+마우스휠
+
+확대 및 이동
+스페이스+이동
+
+다시 돌아가기
+shift+n
+
+레이어 다중 선택
+ctrl +shift + 클릭
+
+여러 이름 바꾸기
+ctrl+p
+
+명령어 팔레트 실행
+ctrl+p 
+
+대괄호키 누르면 레이어 순서변경
+[ ]
+
+한칸씩이동 
+ctrl + [ ]
+
+그룹짓기
+ctrl+g
+
+lock 하기
+ctrl+shift+L
+
+보이기 or 안보이기
+ctrl+shift+H
+
+원하는 대상을 바로 선택
+ctrl+click
+
+위의 부모를 선택
+shift+enter 
+
+요소를 선택할 수 있음
+ctrl + shift + o
+
+주변 패널을 숨겨준다.
+ctrl + \
+
+i 특정지점의 색상을 카피해올 수 있음.
+
