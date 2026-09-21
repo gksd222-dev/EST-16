@@ -1,0 +1,209 @@
+body{
+  background-color: aliceblue;
+}
+
+.site-header{
+  position: sticky;
+  top:0;
+  z-index: 10;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: header 0.3s forwards;
+
+  .header-inner{
+    max-width: 1200px;
+    /* background-color: skyblue; */
+    min-height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .logo{
+    color: dodgerblue;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .navigation{
+    display: flex;
+    gap: 1.5 rem;
+    font-weight: 700;
+    gap: 3rem;
+
+
+
+    /* @media (max-width: 800px){
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-start; 
+      gap: 10px;
+    } */
+  }
+}
+
+.main-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-block: 64px;
+  padding-inline: 2rem;
+  background-color: white;
+
+}
+
+.section-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  
+  h1{
+    font-size: 3rem;
+    margin-top: 8px;
+    small.eyebrow{
+      font-size: 1.2rem;
+      color: gray;
+      font-weight: 400;
+    }
+  }
+
+}
+
+
+.card-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:24px;
+}
+
+.course-card{
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  background-color: #fff;
+  animation: move-y 0.3s ease-in-out forwards;
+
+
+  .card-thumbnail{
+
+    position: relative;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    &:hover img{
+      transform: scale(1.2);
+    }
+  }
+
+  .badge{
+    padding: 6px 10px;
+    background-color: dodgerblue;
+    color:white;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+  }
+
+  &:nth-child(1){animation-delay: 0.3s;}
+  &:nth-child(2){animation-delay: 0.6s;}
+  &:nth-child(3){animation-delay: 0.9s;}
+
+}
+
+
+.card-content{
+  
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+
+  animation: move-x 0.3s forwards;
+  opacity: 0;
+  .category{
+    color: dodgerblue;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+  }
+  .description{
+    color: rgb(83, 83, 83);
+  }
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+@keyframes move-y {
+  from{
+    opacity: 0;
+    transform:translateY(30px)
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+
+@keyframes move-x {
+  from{
+    transform:translateX(-30px);
+    opacity: 0;
+  }
+  to{
+    transform:translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes header {
+  to{
+    opacity: 1;
+    transform:translateY(0)
+  }
+}
+
+
+#popup {
+  
+  width: 50vw;
+  height: 50vh;
+
+  margin: auto;
+  padding: 30px;
+
+  border: none;
+  box-sizing: border-box;
+}
+.button{
+  margin-top: 1rem;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+#popup::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
