@@ -7,7 +7,6 @@ let nickName = 'tiger';
 
 admin = nickName;
 
-
 const OUR_PLANET_NAME = 'earth';
 let currentOnlineUserName = 'beom';
 
@@ -27,18 +26,14 @@ let hadCartItem = false;
 let paymentList;
 
 // - 오늘의 운세
-let fortuneToday = 'so good'
+let fortuneToday = 'so good';
 
 // - 상품 정보
-let product_info = ''
+let product_info = '';
 
 /* variables ----------------------------------------------------------- */
 
-
-
 /* constant variables -------------------------------------------------- */
-
-
 
 // - 1년 기준 일(day)자 수
 const DAY_PER_YEAR = 365;
@@ -46,7 +41,7 @@ const DAY_PER_YEAR = 365;
 // - 브랜드 접두사
 const BRAND_PREFIX = 'nike';
 
-const productA ={
-    name:'',
-    price:'',
-}
+const productA = {
+  name: '',
+  price: '',
+};
