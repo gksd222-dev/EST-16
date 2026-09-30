@@ -74,7 +74,7 @@ for(const key in JS){
 // for..in은 객체, 배열 둘 다 순환이 가능합니다. 근데, 배열의 순환은 위험함
 // 배열에서 가장 중요한건 순서(index)인데 for..in은 그 순서를 보장해주지 않음
 // 즉 for..in은 객체만 사용하는 것이좋다.
-console.clear();
+//console.clear();
 
 const tens = [10, 100, 1000, 10_000];
 

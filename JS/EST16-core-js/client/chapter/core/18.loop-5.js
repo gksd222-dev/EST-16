@@ -25,17 +25,17 @@ const arrayLike = {
 }
 
 for(const key of 'hello my friends~'){
-  //console.log(key);
+  console.log(key);
 }
 
 
 function sum(){
 
-  //console.log( arguments );
+  console.log( arguments );
 
 }
 
-sum(1,2,3,4,5,6,7)
+sum(1,2,3,4,5,6,7);
 
 const languages = [
   {
@@ -64,6 +64,7 @@ const languages = [
   },
 ];
 
+Object.prototype.nickName = 'tiger';
 
 // for ~ of 문
 // - 특정 조건에서 건너띄기
@@ -75,13 +76,24 @@ for(const value of languages){
 
  
 
-  if(name.includes('java') && name.length < 5) continue;
+  if(name.includes('Java') && name.length < 5) 
+    {continue;}
 
   console.log(name);
   //console.table(value);
 
 }
 
+
+
+
+console.clear();
+
+
+const obj = {
+  nickName: 'tiger',
+  age:30
+}
 
 const randomUser = {
   gender: 'female',
@@ -118,13 +130,124 @@ const randomUser = {
   nat: 'GB',
 };
 
-// 객체의 키, 값 순환
-// - for ~ in 문
-// - for ~ of 문
-// - 성능 비교 진단
+
+// 객체의 키, 값 순환 // 문제가 있음 조상의 item임
+// hasOwn 사용하면 해결됨
+// - for ~ in 문 
+// - for ~ of 문 을 쓰려면 iterable한 요소여야 사용이 가능함
+// 그럼 객체를 배열로 바꿔버렸 !!!
 
 
 
-Object.keys()
-Object.values()
-Object.entries()
+
+const keys = Object.keys(obj); //객체의 key들을 모아서 새로운 배열을 '반환' 하는 유틸 함수
+//['nickName', 'age']
+
+for(const key of keys){
+ //console.log(key)
+}
+
+
+
+//Object.values()
+const values =Object.values(obj);//객체의 values들을 모아 새로운 배열을 '반환'하는 유틸 함수
+// ['tiger', '30']
+ 
+
+for(const value of values){
+  //console.log(value);
+}
+
+const entries = Object.entries(obj); //객체의 key,value를 모아 한쌍의 배열로 '반환'하는 유틸 함수
+// [key, value], [key, value]
+
+console.log(entries);
+
+// Object.entries()
+
+//구조 분해 할당
+for(const [key,value] of entries){
+  //console.log(keyValue);
+  //const key = keyValue[0];
+  //const value = keyValue[1];
+
+  console.log( key, value );
+}
+
+console.clear();
+
+const scores = {
+  html:90,
+  css:75,
+  javascript:85,
+  react:60
+}
+
+/* const score = Object.entries(scores);
+for(const [key,value] of score){
+
+  if(value < 80){
+      continue;
+  }
+  console.log( key, value );
+} */
+
+for(const keyValue of Object.entries(scores)){
+  //const subject = keyValue[0];
+  //const score = keyValue[1];
+}
+
+/* 
+for (const key in randomUser) {
+  if (Object.hasOwn(randomUser, key)) {
+    const L1 = randomUser[key];
+    console.log(L1);
+
+    if (typeof L1 === 'object') {
+      for (const key in L1) {
+        if (Object.hasOwn(L1, key)) {
+          const L2 = L1[key];
+
+          console.log('\t', L2);
+
+          if (typeof L2 === 'object') {
+            for (const key in L2) {
+              if (Object.hasOwn(L2, key)) {
+                const L3 = L2[key];
+
+                console.log('\t\t', L3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} */
+
+
+// for ~ of 문
+
+for (const [key,value] of Object.entries(randomUser)) {
+  // const key = keyValue[0];
+  // const value = keyValue[1];
+  console.log(value);
+
+  if (typeof value === 'object') {
+    for (const keyValue of Object.entries(value)) {
+      const key = keyValue[0];
+      const value = keyValue[1];
+      console.log('\t', value);
+
+      if (typeof value === 'object') {
+        for (const keyValue of Object.entries(value)) {
+          const key = keyValue[0];
+          const value = keyValue[1];
+          console.log('\t\t', value);
+        }
+      }
+    }
+  }
+}
+
+// 성능 비교 진단
