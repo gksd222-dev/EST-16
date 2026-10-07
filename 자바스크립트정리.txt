@@ -639,3 +639,55 @@ HTML 컬렉션은 유물이다.
 
 this 함수는 누가 호출했는지가 중요하다.
 
+10/07
+- __proto__ 는 논란의 여지가 있어 잘 사용하지 않는다.
+
+- this는 호출한 대상을 바인딩한다
+- 아래 함수서 this는 rabbit을 지칭한다.
+
+// animal엔 다양한 메서드가 있습니다.
+let animal = {
+  walk() {
+    if (!this.isSleeping) {
+      alert(`동물이 걸어갑니다.`);
+    }
+  },
+  sleep() {
+    this.isSleeping = true;
+  }
+};
+
+let rabbit = {
+  name: "하얀 토끼",
+  __proto__: animal
+};
+
+// rabbit에 새로운 프로퍼티 isSleeping을 추가하고 그 값을 true로 변경합니다.
+rabbit.sleep();
+
+- enumerable : 열거 가능한
+- get eat, set eat은 열거가 불가능하다
+
+생성자 함수와 생성자 함수로 만들어진 인스턴스를 구분하는 것이 중요하다.
+
+function Rabbit() {} : 생성함수 component
+
+쥬디 : 함수를 통해 생성된 인스턴스
+
+클래스는 결국 함수다.
+
+
+
+-클래스에 정의된 메서드는 열거할 수 없습니다(non-enumerable).
+ 클래스의 prototype 프로퍼티에 추가된 메서드의 enumerable 플래그는 false입니다.
+ 
+>> 순반참조를 할 수 없다.
+
+set은 매개변수가 꼭 들어와야한다.
+
+#을 붙이면 밖에서 접근이 불가하다
+
+class Tiger extends Animal {
+}
+- Animal을 확장하여 Tiger를 만들겠다
+- static이라고 선언하면 생성자만 사용할 수 있다.

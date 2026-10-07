@@ -9,32 +9,29 @@ const shopOrder = {
   menu: [
     { name: '통 새우 돈까스', price: 13000, count: 2 },
     { name: '치즈 돈까스', price: 10000, count: 1 },
+    { name: '곰곰 계란 30구', price: 8300, count: 1 },
   ],
+  totalPrice(){
+    // this.menu.forEach((item) => {
+    //   this.total += item.price * item.count
+    //   console.log(this);
+    // })
+    this.total=this.menu.reduce((acc,cur)=> acc+ cur.price*cur.count, 0)
+  }
 };
+
+
 
 // 메서드 없이
 // 메뉴안에 있는 product price의 총합
 
+console.log(
 
-let total=0;
-function getValues(obj,total){
-  
-  let arr = [];
+  shopOrder.menu[0].price * shopOrder.menu[0].count
+  +
+  shopOrder.menu[1].price * shopOrder.menu[1].count
 
-  for(const key in obj){
-  
-    if(Object.hasOwn(obj,key)){
-      arr.push(obj[key])
-    }
-    total=total+obj[key];
-    console.log(total);
-
-  }
-
-  return total;
-}
-
-console.log(shopOrder,total);
+)
 
 
 // 메서드와 this 
@@ -51,6 +48,8 @@ console.log(shopOrder,total);
 
 // 일반 함수 (문/식)의 this vs. 화살표 함수 식의 this
 
+// 
+
 const navigationMenu = {
   name: '글로벌 내비게이션',
   items: [
@@ -60,7 +59,7 @@ const navigationMenu = {
   getItem(index) {
     return this.items[index];
   },
-  addItem: (newItem) => {
+  addItem(newItem){
     this.items.push(newItem);
   },
 };
