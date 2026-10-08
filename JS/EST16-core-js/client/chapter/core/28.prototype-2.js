@@ -85,7 +85,7 @@ class Array extends Object{
 
   static from(){
   }
-
+  
   static isArray(){
   }
 }
