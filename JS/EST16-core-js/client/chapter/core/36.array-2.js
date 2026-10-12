@@ -360,7 +360,7 @@ function compare(a,b){
 
 // toSpliced
 
-console.clear();
+//console.clear();
 
 // ⭐️ map ⭐️  새로운 배열을 반환 
 // 사람들의 이름만을 모아놓은 새로운 배열 
@@ -399,7 +399,7 @@ const tags = people.map(({imgSrc, imgAlt, name, age, job})=>{
 // tags.forEach()
 
 
-//document.querySelector('ul').insertAdjacentHTML('beforeend',tags)
+document.querySelector('ul').insertAdjacentHTML('beforeend',tags)
 
 
 
@@ -454,7 +454,7 @@ const template = people.reduce((htmlCode,user)=>{
 },'')
 
 
-//document.querySelector('ul').insertAdjacentHTML('beforeend',template);
+document.querySelector('ul').insertAdjacentHTML('beforeend',template);
 
 
 
