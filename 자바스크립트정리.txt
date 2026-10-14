@@ -766,3 +766,24 @@ slice로 웬만한건 다한다.
 - 개발시작할 때 포트넘버를 설정하고 시작한다.
 - 정해진 영역이 있구나
 - 라우팅을 직접 정해줘야하는 시점일때
+
+10/14
+
+addEventListener >> debounce(moveHandler) >> moveHandler
+-디바운스에서 무브핸들러로 this와 인수 e를 전달하고 있다.
+
+
+클릭하면 기저까지 내려갔다가 올라온다. - bubbling이라고 한다.
+p - div - form - body - html
+
+
+<p>를 클릭하면 다음과 같은 순서로 이벤트가 전달됩니다.
+1. HTML → BODY → FORM → DIV (캡처링 단계, 첫 번째 리스너)
+P (타깃 단계, 캡쳐링과 버블링 둘 다에 리스너를 설정했기 때문에 두 번 호출됩니다.)
+2. DIV → FORM → BODY → HTML (버블링 단계, 두 번째 리스너)
+
+
+mouseenter, mouseleave
+마우스를 올렸을때, mouseenter 작동, 떠났을때 mouseleave가 작동
+
+closest : 부모 조상을 찾는 함수
