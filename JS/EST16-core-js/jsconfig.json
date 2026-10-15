@@ -6,7 +6,6 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "checkJs": false,
     "strictNullChecks": false,
-    "baseUrl": "."
   },
   "include": ["**/*.js"],
   "exclude": ["node_modules"]

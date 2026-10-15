@@ -787,3 +787,10 @@ mouseenter, mouseleave
 마우스를 올렸을때, mouseenter 작동, 떠났을때 mouseleave가 작동
 
 closest : 부모 조상을 찾는 함수
+
+10/15
+https://swiperjs.com/ 홈페이지 참조
+
+new 키워드가 오는 것은 생성자 함수라는 것을 의미한다.
+
+parallax 시차
