@@ -42,12 +42,7 @@ function addClass(node,className){
     
     node.classList.add(className)
   }
-
-
-  
 }
-
-
 
 addClass('.first','a')
 addClass('.first',['d','e','f'])
