@@ -9,19 +9,20 @@
 // 함수는 태어난 순간 자신이 태어난 환경을 기억합니다.
 
 
+
 function sum(a,b){
-    return a + b
+  return a + b
 }
 
 
-//const result = sum(1,2);
+// const result = sum(1,2);
 const result = sum;
 
 
-// currying function
+// currying function 
 function first(x){
-  //let x = 10;
-  //let y = 20;
+  // let x = 10;
+  // let y = 20;
 
   function second(y){
     return x + y;
@@ -31,12 +32,16 @@ function first(x){
 
 }
 
+
 const a = first(10);
 
 a(20);
 
+
+
+
 function counter(){
-  let count=0;
+  let count = 0;
 
   function inner (){
     return ++count;
@@ -44,22 +49,30 @@ function counter(){
   return inner;
 }
 
+
 const c1 = counter();
 const c2 = counter();
 const c3 = counter();
 
+
 function multi(x){
-  
+
   return function (y){
-    return x*y;
+    return x * y;
   }
-  //return inner;
 }
+
+
 
 const double = multi(2);
 const triple = multi(3);
 
+
 const _multi = (x) => (y) => x * y;
+
+
+
+
 
 
 

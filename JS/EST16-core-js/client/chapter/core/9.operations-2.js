@@ -2,28 +2,28 @@
 /* Comparison Operator */
 /* ------------------- */
 
-const number = [10, '10', 6, 101, 10_000];
+
+
+const number = [10 , '10', 6 , 101 , 10_000]
+
 
 // ~ 보다 큼 또는 작음 → boolean
-let lessThen = number[0] < number[1];
-
-let greaterThen = number[0] > number[1];
+let lessThen = number[0] < number[1]
+let greaterThen = number[0] > number[1]
 
 // ~ 보다 크거나 작음 또는 같음 → boolean
 let lessThenAndEqual = number[3] <= number[4];
 
-let greaterThenAndEqual = number[3] >= number[4];
+let greaterThenAndEqual = number[3] >= number[4]
 
 // 동등(등급이나 정도가 같다) → boolean
-let equal = number[0] == number[1];
+let equal = number[0] == number[1]
 
 // 다름(같지 않음) → boolean
-let unequal = number[0] === number[1];
+let unequal = number[0] !== number[1]
 
 // 동일(똑같다) → boolean
-let same = number[0] === number[1];
-
-
+let same = number[0] === number[1]
 
 // 문자 비교
 // 사전편집(lexicographical) 순
@@ -31,6 +31,7 @@ let same = number[0] === number[1];
 // 예) 'ㅎ' > 'ㄱ' → true
 // 소문자가 대문자보다 크다고 판단
 // 예) 'A' > 'a' → false
+
 
 // 문자 비교 알고리즘(문제 해결을 위한 절차)
 // 1. 두 문자열의 첫 글자 비교

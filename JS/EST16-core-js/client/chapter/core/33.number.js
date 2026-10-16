@@ -24,54 +24,65 @@ riches = 1e-6; // → 1 / 10 ** 6
 
 /* 어림수 ---------------------------------------------------------------- */
 
-let number = 90_267.1100032;
+let number = 90_127.53100032;
 
 // 내림
 let floor = Math.floor(number);
 console.log(floor);
 
+
 // 반올림
 let round = Math.round(number);
-console.log(round); 
+console.log(floor);
+
 
 // 올림
 let ceil = Math.ceil(number);
 console.log(ceil);
 
+
 // 절삭(소수점 이하)
 let truncate = Math.trunc(number);
 console.log(truncate);
+
 
 // 난수
 let random = Math.random() * 100;
 console.log(random);
 
+
 // 여러 수 중, 최댓값
-let max = Math.max(10.3,-10.5);
+let max = Math.max(10,3,-10,5);
 console.log(max);
 
+
 // 여러 수 중, 최솟값
-let min = Math.min(5, 10, -5, 100, -30);
+let min = Math.min(5,10,-5,100,-30);
 console.log(min);
 
 
 // 거듭제곱
-let pow = Math.pow(2,53);
+let pow = Math.pow(2,53); // 2 ** 53
 
-//절대값
-let abs = Math.abs(-10) 
+// 절댓값
+let abs = Math.abs(-10) // 10
 
-//파이
+// 파이 
 let PI = Math.PI;
 
-console.log(PI)
+console.log(PI);
+
+
 
 // 최소, 최대 값 사이 난수 반환 함수
 let getRandomMinMax = (min, max) => {
   return Math.round(Math.random() * (max-min) + min)
 };
 
-console.log(getRandomMinMax(2,10));
+
+
+
+getRandomMinMax(2,10)
 
 
 /* 진법 ------------------------------------------------------------------ */

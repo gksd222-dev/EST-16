@@ -14,16 +14,15 @@ const shopOrder = {
   totalPrice(){
     // this.menu.forEach((item) => {
     //   this.total += item.price * item.count
-    //   console.log(this);
+    //   console.log( this );
     // })
-    this.total=this.menu.reduce((acc,cur)=> acc+ cur.price*cur.count, 0)
+    this.total = this.menu.reduce((acc,cur)=> acc + cur.price * cur.count,0)
   }
 };
 
 
 
-// 메서드 없이
-// 메뉴안에 있는 product price의 총합
+
 
 console.log(
 
@@ -31,7 +30,36 @@ console.log(
   +
   shopOrder.menu[1].price * shopOrder.menu[1].count
 
-)
+);
+
+
+
+// let total = 0;
+// shopOrder.menu.forEach( item => total += item.price * item.count)
+// total = shopOrder.menu.reduce( (acc,cur)=> acc + cur.price * cur.count,0);
+
+
+
+
+/* 
+
+
+1. 메서드 없이 menu 안에 있는 product price의 총 합을 콘솔에 출력하시오.
+      - 한 단계씩 접근하는 방법을 사용합니다.  ex. 객체.속성.값
+
+2. totalPrice 메서드를 정의한 후 total값 구하기 (with reduce)
+      - total 속성을 정의한 후 값을 넣어줍니다. ex. this.total = 더해진 값
+
+3. menu에 새로운 항목을 추가 ex. { name: '간장 새우장', price: 15000, count:3} 
+
+4. total이 잘 나오는지 확인하기.
+
+*/
+
+
+
+
+
 
 
 // 메서드와 this 
@@ -48,7 +76,7 @@ console.log(
 
 // 일반 함수 (문/식)의 this vs. 화살표 함수 식의 this
 
-// 
+
 
 const navigationMenu = {
   name: '글로벌 내비게이션',
@@ -59,7 +87,18 @@ const navigationMenu = {
   getItem(index) {
     return this.items[index];
   },
-  addItem(newItem){
+  addItem(newItem) {
     this.items.push(newItem);
   },
 };
+
+
+
+
+
+
+
+
+
+
+

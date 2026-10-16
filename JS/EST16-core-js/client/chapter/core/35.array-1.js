@@ -11,7 +11,7 @@
 
 
 // 배열 선언
-let friends = '태민 소영 철현 민석 수신 윤지'.split(' ');
+let friends = '태민 소영 철현 민석 수진 윤지'.split(' ');
 
 // 배열 요소의 총 갯수
 
@@ -54,6 +54,8 @@ let copiedArrayInstance = friends.slice();
 
 // 3. spread syntax
 let copiedArraySpread = [...friends];
+
+
 
 // 다차원 배열
 // 행렬을 저장하는 용도

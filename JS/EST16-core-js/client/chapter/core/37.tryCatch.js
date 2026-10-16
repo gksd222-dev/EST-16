@@ -17,6 +17,35 @@
 // try ... catch는 동기적으로 동작하므로 비동기 처리 과정 내부에서 사용해야 함
 
 
+
+try{
+
+  // 아니 이렇게 코드 쓰는 사람이 어딨음?
+
+  /* 
+  1. 유저 정보를 서버에서 가져와야함
+  2. 가져온 유저 정보를 화면에 출력 
+  */
+
+  // 유저정보 가져오기()
+  // 가져온 정보를 가지고 화면 출력하기()
+
+
+}catch(err){
+
+  console.error('에러 발생!');
+
+}
+
+
+
+
+
+
+
+
+
+
 // 오류 객체(Error Object)
 // - name, message, stack 정보 제공
 
@@ -30,31 +59,15 @@
 // - ReferenceError
 
 
-
-
-try{
-
-  //아니 이렇게 코드 쓰는 사람이 어딨음?
-  
-  /* 
-  1. 유저 정보를 서버에서 가져와야함
-  2. 가져온 유저 정보를 화면에 출력
-  */
-
-  // 유저정보 가져오기()
-  // 가져온 정보를 가지고 화면 출력하기()
-
-}catch(err){
-  console.error('에러 발생!');
-}
-
 // finally 절
 // 오류가 있던, 없던 상관없이 항상 실행
 // try ... catch를 빠져나가는 어떠한 경우에도 항상 실행
 
 
-// 서버에서부터 전달 받은 데이터
-// 문자화시킨다.
+
+
+// 서버에서부터 전달 받은 데이터 
+
 const data = JSON.stringify({
   "id": 1,
   "name": "Leanne Graham",
@@ -95,9 +108,20 @@ try{
 
   console.dir( message );
 
-  //document.body.innerHTML = '404 not found ❌' + message
+  // document.body.innerHTML = '404 not found ❌' + message
   
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

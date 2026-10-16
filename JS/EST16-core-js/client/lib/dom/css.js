@@ -1,3 +1,7 @@
+import { isObject, isString } from "../utils/type.js";
+import { getNode } from "./getNode.js";
+
+
 /**
  * @function DOM Element에 클래스를 추가하는 함수
  * @param {HTMLElement | string} node
@@ -5,7 +9,9 @@
  * @returns {void}
  */
 
-function addClass(node, className){
+
+
+export function addClass(node, className){
   
   if(isString(node)) node = getNode(node);
   
@@ -37,7 +43,7 @@ function addClass(node, className){
  * @returns {void}
  */
 
-function removeClass(node, className){
+export function removeClass(node, className){
   if(isString(node)) node = getNode(node);
   if(!className) {
     // node.className = ''
@@ -54,7 +60,32 @@ function removeClass(node, className){
  * @param {string} className 
  * @returns {boolean} - 추가 true / 제거 false
  */
-function toggleClass(node, className){
+export function toggleClass(node, className){
   if(isString(node)) node = getNode(node);
   return node.classList.toggle(className)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,29 +15,29 @@ function getRandomValue() {
 // 함수 선언
 
 function calcPrice(
-  priceA = getRandomValue(),
+  priceA,
   priceB = getRandomValue(),
   priceC = getRandomValue()
 ) {
-  //if( !priceC ) priceC = 0;
-
-  //priceC = priceC || 0;
-  //priceC ||= 1000;
-
-  //priceC = priceC ?? 0;
-  //priceC ??= 0;
+  // if(priceC === undefined) priceC = 0;
+  // if( !priceC ) priceC = 0;
+  // priceC = priceC || 0;
+  // priceC ||= 0;
+  // priceC = priceC ?? 0;
+  // priceC ??= 0;
 
   if(!priceA){
-    throw new Error('calcPrice 함수의 첫 번째 인자는 필수 입력 항목입니다.')
+    throw new Error('calcPrice 함수의 첫 번째 인자는 필수 입력 항목입니다.');
   }
+
 
   return priceA + priceB + priceC;
 }
 
 // 함수 호출
-//const total = calcPrice();
+const total = calcPrice(1);
 
-//console.log(total);
+console.log(total);
 
 // 함수 값 반환
 
@@ -54,77 +54,130 @@ function calcPrice(
 /* 다음 함수를 작성해봅니다. -------------------------------------------------- */
 
 // rem(pxValue: number|string, base: number):string;
-//let rem;
+// let rem;
 
-
-/* 
-function rem (pxValue,base=16){
+function rem (pxValue, base = 16){
 
   if(!pxValue) throw new Error('rem 함수의 첫 번째 인수는 필수 입력값 입니다.');
-  if(typeof pxValue === 'string'){
-    pxValue= parseInt(pxValue,10);
+  if(typeof pxValue === 'string') {
+    pxValue = parseInt(pxValue,10);
   }
 
-  return pxValue / base +'rem'
+  return pxValue / base + 'rem'
+
 }
 
+
+
 console.assert(rem('30px') === '1.875rem');
- */
+
+
+
+
+
+// css(node: string, prop: string, value: number|strung) : string;
+
 
 const first = document.querySelector('.first');
 
 
+// DOM에서 스타일 값을 가져올 때 element.Style.prop으로 가져올 수 없음.
+// 계산이 완료된 스타일 값  getComputedStyle() 메서드를 사용해서 값을 가져와야 함
+
+
+
+// getCss(first,'font-size'); // '32px'
+// getCss('.first','font-size'); // '32px'
+
+
+// setCss()
+
+
+
+// setCss(first,'color','orange');
+
+
+/* 
+
+객체의 속성에 접근하는 방법은 2가지가 있습니다.
+
+    1. 점 표기법    (ex. obj.key )
+    2. 대괄호 표기법 (ex. obj[key])
+*/
+
+  
+// 모듈화 / encapsulation 캡슐화 
+
 const css = (function(){
 
-function getCss(node,prop){
+  
+  function getCss(node,prop){
 
-  if(typeof node === 'string'){
-    node = document.querySelector(node);
+    if(typeof node === 'string'){
+      node = document.querySelector(node);
+    }
+    
+    if( !(prop in document.body.style)){
+      throw new Error('getCss 함수의 두 번째 인수는 유효한 css 속성이어야 합니다.')
+    }
+
+    
+    return getComputedStyle(node)[prop]
+
   }
 
-  return getComputedStyle(node)[prop]
-}
 
 
-//getCss(first, 'font-size'); //'32px'
-//getCss('.first', 'font-size'); //'32px'
+  function setCss(node,prop,value){
 
-function setCss(node, prop, value){
+    if(typeof node === 'string') node = document.querySelector(node);
 
-  if(typeof node === 'string') node = document.querySelector(node);
+    if(!(prop in document.body.style)) throw new Error('setCss 함수의 두 번째 인수는 유효한 css속성이어야 합니다.');
 
-  if(!(prop in document.body.style)) throw new Error('setCss 함수의 두 번째 인수는 유효한 css 속성이어야 한다.');
+    if(!value) throw new Error('setCss 함수의 세 번째 인수는 필수 입력 값 입니다.');
 
-  if(!value) throw new Error('setCss 함수의 세 번째 인수는 필수 입력 값입니다.');
+    node.style[prop] = value;
 
-  node.style[prop]=value;
-}
+  }
 
-//setCss(first, 'color', 'orange');
 
-function css(node, prop, value)
-{
-  
-  if(!value){
-    //getter
-    return getCss(node,prop)
-  }else{
-    //setter
-    setCss(node,prop,value)
-  } 
 
-  //return !value ? getCss(node, prop) : setCss(node, prop, value)
+  function css(node,prop,value){
 
-}
+    
+    // if(!value){
+    //   // getter
+    //   return getCss(node,prop)
 
-return css
+    // }else{
+    //   // setter
+    //   setCss(node,prop,value)
+    // }
+
+    return !value ? getCss(node, prop) : setCss(node, prop, value)
+
+    
+  }
+
+  return css
+
 
 })()
 
 
-console.log(css);
 
-// css(node: string, prop: string, value: number|strung) : string;
+console.log( css );
+
+
+
+
+
+
+
+
+
+
+
 
 
 // node의 값을 'h1'으로 받았을 경우

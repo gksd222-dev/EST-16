@@ -6,7 +6,7 @@
 
 // while(i > 0){
 
-//   console.log(--i)
+//   console.log(i--)
 
 // }
 
@@ -19,6 +19,7 @@ const frontEndDev = [
   'React',
   'Redux',
   'NextJS',
+  'Zustand',
 ];
 
 /* 프론트엔드 개발 집합 항목 출력 ---------------------------------------------- */
@@ -33,6 +34,8 @@ const frontEndDev = [
 
 /* 프론트엔드 개발 집합을 순환해서 각 아이템을 Console 패널에 출력 -------------------- */
 
+
+
 console.time('순방향')
 
 // while 문 (순환 : 순방향)
@@ -40,20 +43,24 @@ console.time('순방향')
 let i = 0;
 
 while (i < frontEndDev.length) {
-  //console.log(frontEndDev[i]);
-
+  // console.log(frontEndDev[i]);
   i++;
 }
 console.timeEnd('순방향')
 
+
+
 console.time('역방향')
 // while 문 (역순환 : 역방향)
-let l=frontEndDev.length;
-while (l) {
+
+let l = frontEndDev.length;
+
+while(l){
 
   console.log(frontEndDev[--l]);
   
 }
+
 console.timeEnd('역방향')
 
 

@@ -8,16 +8,12 @@ let value = Boolean(b);
 
 // 논리곱(그리고) 연산자
 let AandB = a && b;
-console.log( AandB );
+console.log(AandB);
 
 // 논리곱 할당 연산자
 
-//a &&= b;
-//a = a && b;
-
-
-
-
+// a &&= b;
+// a = a && b;
 
 // 논리합(또는) 연산자
 let AorB = a || b;
@@ -25,72 +21,65 @@ console.log(AorB);
 
 // 논리합 할당 연산자
 
-//a ||=  b;
-
-
+// a ||= b;
 
 // 부정 연산자
 let reverseValue = !!value;
 
-
 // 조건 처리
 
 // 첫번째 Falsy를 찾는 연산 (&&)
-let whichFalsy = true && ` ` && [] && {thisIsFalsy:false};
-
+let whichFalsy = true && ' ' && [] && { thisIsFalsy: false };
 
 // 첫번째 Truthy를 찾는 연산 (||)
-const whichTruthy = false || '' || [2,3].length || {thisIsTruthy:true};
-
-
-
-
-
+let whichTruthy = false || '' || [2, 3].length || { thisIsTruthy: true };
 
 /* 
-1. 대소문자 구분 없이 받을 수 있게
+1. 대소문자 구분 없이 받을 수 있게 
 2. 공백 문자 처리
+3. 콘솔창에 에러가 발생하면 안됩니다.
+
+
+
 */
 
-function login(){
+console.clear();
+
+
+
+
+
+function logIn(){
+
   const userName = prompt('누구십니까?');
 
+  // if(userName === null || userName === undefined) return;
   if(!userName) return;
 
   if(userName.toLowerCase() === 'admin'){
+    
+    const password = prompt('비밀번호는?');
 
-    const pass = prompt('비밀번호:');
-
-    if(pass.toLowerCase() === 'themaster'){
-      console.log('환영합니다!');
-    } else if(pass === null){
-      console.log('취소되었습니다.');
-    } else{
-      console.log('인증에 실패하였습니다.');
-      login();
+    if(password.toLowerCase() === 'themaster'){
+      console.log('Welcome!');
+      
+    }else if(password === null){
+      console.log('canceled');
+      
+    }else{
+      console.log('Wrong password');
+      logIn();
+      
     }
-  } else if(userName.replace(/\s*/g, "") === '' || userName === null){
-    console.log('취소되었습니다.');
-  } else{
-    console.log('인증되지 않은 사용자입니다.');
+    
+  }else if(userName === null || userName.replace(/\s*/g,'') === ''){
+    console.log('cancel');
+    
+  }else{
+    console.log('아돈노');
+    
   }
+
 }
 
-  // const userName = prompt('누구십니까?');
 
-  // if(userName?.toLowerCase() === 'admin'){
-
-  //   const pass = prompt('비밀번호:');
-
-  //   if(pass?.toLowerCase() === 'themaster'){
-  //     console.log('환영합니다!');
-  //   } else if(pass === null){
-  //     console.log('취소되었습니다.');
-  //   } else{
-  //     console.log('인증에 실패하였습니다.');
-  //   }
-  // } else if(userName?.replace(/\s*/g, "") === '' || userName === null){
-  //   console.log('취소되었습니다.');
-  // } else{
-  //   console.log('인증되지 않은 사용자입니다.');
-  // }

@@ -16,10 +16,10 @@
 // - 재귀 깊이(depth)
 
 function pow(x,n){
-  if(n===1){
+  if ( n === 1){
     return x;
   }else{
-    return x * pow(x, n-1);
+    return x * pow(x , n - 1);
   }
 }
 
@@ -31,10 +31,12 @@ pow(2,4)
 // - 기호(!)를 사용하여 n!으로 표기
 // - 예시) 4! = 4 * 3 * 2 * 1
 
+
 function factorial(n){
   if(n===1)return n;
-  else return n*factorial(n-1);
+  else return n * factorial(n - 1);
 }
+
 
 // fibonacci 함수를 재귀 호출 방식으로 작성
 // 참고: https://bit.ly/fibonacci-util
@@ -44,8 +46,11 @@ function factorial(n){
 function fibonacci(n){
   if(n <= 0) return 0;
   if(n <= 2) return 1;
-  return fibonacci(n-1) + fibonacci(n-2)  
+  return fibonacci(n-1) + fibonacci(n-2)
 }
+
+
+
 
 
 // -----------------------------------------------------------------------
@@ -84,22 +89,26 @@ function fibonacci(n){
 const memoFibo = (n) => {
   if(n <= 0) return 0;
   if(n <= 2) return 1;
-
+  
   if(memoFibo.cache[n]){
     return memoFibo.cache[n];
   }else{
-    return memoFibo.cache[n] = memoFibo(n-1) + memoFibo(n-2)
+    return memoFibo.cache[n] = memoFibo(n-1) + memoFibo(n-2);
   }
 }
 
+
 memoFibo.cache = {}
+
+
+
 
 
 
 // 회사 부서 팀원들의 월급 총 합을 구해보세요.
 // - 반복문 기반 또는 재귀 호출 알고리즘 중 택 1
 
-const SocialPartiners = {
+const SocialPartners = {
 	foundingDate: 2021,
   team: {
     marketing: [
@@ -142,16 +151,17 @@ const SocialPartiners = {
 };
 
 
+
 function sumSalaries(department){
 
   if(Array.isArray(department)){
-    return department.reduce((acc,cur)=> acc+cur.salary,0);
+    return department.reduce((acc, cur)=> acc + cur.salary,0);
   }
   else{
-    let sum=0;
+    let sum = 0;
 
     for(let sub of Object.values(department)){
-      sum+=sumSalaries(sub);
+      sum += sumSalaries(sub);
     }
     return sum;
   }
@@ -159,4 +169,15 @@ function sumSalaries(department){
 
 
 
-sumSalaries(SocialPartiners)
+sumSalaries(SocialPartners)
+
+
+
+
+
+
+
+
+
+
+

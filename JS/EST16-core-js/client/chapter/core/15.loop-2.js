@@ -1,17 +1,22 @@
 
-/* let i=0;
+
+
+
+let i = 0;
 
 do{
 
   console.log(i);
-
-  if( i=== 3){
+  
+  if( i === 3){
     break;
   }
 
   i++
 
-}while( i < 5 ); */
+
+}while( i < 5 );
+
 
 
 /* -------------------- */
@@ -33,75 +38,70 @@ do{
 
 
 
+const first = document.querySelector('.first');
 
 
-
-
-
-/* const first = document.querySelector('.first')
-//console.log(first);
-let second = first;
-
-do{
-
-  second = second.nextSibling;
-
-  console.log( second );
-
-}while(second.nodeType !== 1)
-
-  console.log( second ); */
-
-
-// const first = document.querySelector('.first')
-
-
-
-/* function next(node){
-  let second = node;
-
-  do{
-  
-    second = second.nextSibling;
-
-  }while(second.nodeType !== 1)
-
-  return second;
-} */
-
-const first = document.querySelector('.first')
 
 function next(node){
-
-  //node로 넘어온 값이 실제 Element인가? 아닌가?
-
-  //type guard => validation
+  
+  // node로 넘어온 값이 문자인가? 
+  
+  // type guard => validation
   if(typeof node === 'string'){
     node = document.querySelector(node)
   }
 
   do{
-  
+
     node = node.nextSibling;
-  
+
   }while(node.nodeType !== 1)
 
   return node;
 }
+
+
 
 function prev(node){
-  if(typeof node === 'string'){
+    if(typeof node === 'string'){
     node = document.querySelector(node)
   }
 
   do{
-  
+
     node = node.previousSibling;
-  
+
   }while(node.nodeType !== 1)
 
   return node;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
