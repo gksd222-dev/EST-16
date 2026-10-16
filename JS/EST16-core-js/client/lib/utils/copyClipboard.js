@@ -1,7 +1,5 @@
-
-
 export function copyClipboard(text) {
 
-  return navigator.clipboard.writeText(text).then // [[Promise Object]]
+  return navigator.clipboard.writeText(text) // [[Promise Object]]
 
 }
