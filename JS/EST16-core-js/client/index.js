@@ -5,7 +5,9 @@
 // 4. 숫자 더하기
 // 5. result에 출력하기
 
+import { getNode } from "./lib/dom/getNode.js";
 
+console.log( getNode );
 
 function phase1(){
 
