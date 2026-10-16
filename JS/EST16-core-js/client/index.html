@@ -1,34 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko-KR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS를 배워보자!</title>
-    <!-- <script src="./index.js"></script> -->
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS를 배워보자!</title>
 
-    <script defer src="chapter/core/36.array-2.js"></script>
-    <script defer src="./lib/utils/type.js"></script>
+  <!-- <script src="./index.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script src="./lib/utils/type.js"></script>
+  <script src="./lib/dom/getNode.js"></script>
+  <script src="./lib/dom/attr.js"></script>
+  <script src="./lib/dom/insert.js"></script>
+  <script defer src="./index.js"></script>
 
-  </head>
-  <body>
+  <link rel="stylesheet" href="./style.css"/>
+
+</head>
+<body>
+
+  <form class="calculator">
+      <div class="first">
+        <label for="firstNumber">First Value</label>
+        <input type="number" name="first" id="firstNumber" required/>
+      </div>
+      
+      <div class="operator"> 
+       +
+      </div>
+      
+      <div class="second">
+        <label for="secondNumber">Second Value</label>
+        <input type="number" name="second" id="secondNumber" required/>
+      </div>
     
-    <h1 lang="en" class="first">
-      <span onclick="alert('clicked!')">Learning</span>
-      ECMAScript</h1>
+      <input id="clear" type="submit" value="clear"/>
+  
+      <div class="result">
+        -
+      </div>
+  
+    </form>
+ 
 
-    <!-- 주석입니다. -->
-    <h2 lang="en" class="second">
-      <span>Hello</span>
-        world</h2>
-    
-    <!-- 주석입니다. -->
-    <h2 lang="en" class="third">
-      <span>Javascript</span></h2>
-
-    
-    <button type="button">click me!</button>
-    
-    <ul></ul>
-
-  </body>
+</body>
 </html>
