@@ -6,8 +6,6 @@ import { getNode } from "./getNode.js";
 
 
 
-
-
 export default function clearContent(node){
 
   if(isString(node)) node = getNode(node);

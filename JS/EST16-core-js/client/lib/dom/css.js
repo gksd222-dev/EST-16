@@ -10,7 +10,6 @@ import { getNode } from "./getNode.js";
  */
 
 
-
 export function addClass(node, className){
   
   if(isString(node)) node = getNode(node);
@@ -35,7 +34,6 @@ export function addClass(node, className){
   
 }
 
-
 /**
  * @function DOM Element에 클래스를 제거하는 함수
  * @param {HTMLElement | string} node
@@ -52,7 +50,6 @@ export function removeClass(node, className){
   }
   node.classList.remove(className);
 }
-
 
 /**
  * @function DOM Element에 클래스를 토글하는 함수
