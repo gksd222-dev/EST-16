@@ -780,3 +780,9 @@ import clearContent from "./lib/dom/clearContent.js";
 import { getNode, getNodes } from "./lib/dom/getNode.js";
 import { getNode as $, getNodes } from "./lib/dom/getNode.js";
 ...
+
+
+default export(기본 내보내기) => import 함수이름/변수이름,{함수이름} from '경로설정'
+괄호없이 내보낸다(둘을 동시에 내보낼 수 없다). 하나만 내보낸다는 뜻이다.
+한개의 객체, 배열, 함수 만 내보낸다.
+import clearContent {getNode as $} from "./lib/dom/clearContent.js";
