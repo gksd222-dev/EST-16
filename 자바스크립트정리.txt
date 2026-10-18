@@ -787,3 +787,8 @@ mouseenter, mouseleave
 마우스를 올렸을때, mouseenter 작동, 떠났을때 mouseleave가 작동
 
 closest : 부모 조상을 찾는 함수
+
+10/16
+innerHTML 사용주의
+
+elem.nodeType == 9 – 문서 객체
