@@ -760,23 +760,50 @@ slice로 웬만한건 다한다.
 
 -iterator 는 for of
 
+
+2. CSSOM, BOM, DOM은 Javascript가 만들어 주는 것이다.
+
+- 개발시작할 때 포트넘버를 설정하고 시작한다.
+- 정해진 영역이 있구나
+- 라우팅을 직접 정해줘야하는 시점일때
+
+10/14
+
+addEventListener >> debounce(moveHandler) >> moveHandler
+-디바운스에서 무브핸들러로 this와 인수 e를 전달하고 있다.
+
+
+클릭하면 기저까지 내려갔다가 올라온다. - bubbling이라고 한다.
+p - div - form - body - html
+
+
+<p>를 클릭하면 다음과 같은 순서로 이벤트가 전달됩니다.
+1. HTML → BODY → FORM → DIV (캡처링 단계, 첫 번째 리스너)
+P (타깃 단계, 캡쳐링과 버블링 둘 다에 리스너를 설정했기 때문에 두 번 호출됩니다.)
+2. DIV → FORM → BODY → HTML (버블링 단계, 두 번째 리스너)
+
+
+mouseenter, mouseleave
+마우스를 올렸을때, mouseenter 작동, 떠났을때 mouseleave가 작동
+
+closest : 부모 조상을 찾는 함수
+
 10/16
-function 앞에 export를 붙여줘야 참조가 가능하다.
-- import { getNode } from "./getNode.js";
-- import 작성시 import statement를 선택하여 틀을 만든다
+innerHTML 사용주의
 
+elem.nodeType == 9 – 문서 객체
 
--표기하는 방법을 알아 둘 것
-import {
-  attr,
-  getNode,
-  addClass,
-  interLast,
-  removeClass,
-  clearContent
-} from "./lib/dom/index.js";
+10/19
+- C R U D 잘되냐? 비동기 통신이 잘되느냐는 의미임
+- 400번대는 보통 유저의 문제이다.
+- 403은 권한 부여가 필요, 500번대는 서버개발자에게 문의해야함.
 
-import clearContent from "./lib/dom/clearContent.js";
-import { getNode, getNodes } from "./lib/dom/getNode.js";
-import { getNode as $, getNodes } from "./lib/dom/getNode.js";
-...
+- 헤더는 데이터를 보낼때 데이터에 대한 사용 설명서이다.
+- 콜백
+
+-xhr의 정확한 사용방식은
+구조분해할당을 하여서 함수를 설정할 수 있다
+함수를 전달해서 콜백으로 안의 데이터를 꺼내서 사용할 수 있다.
+
+프로미스함수는 열거하기 때문에 콜백함수보다 가독성이 뛰어나다.
+프로미스 선언이후에는 then 함수를 사용
