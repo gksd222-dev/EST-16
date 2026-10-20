@@ -7,7 +7,7 @@ import { changeColor, clearContent, delayP, getNode, insertLast, tiger } from '.
 
 
 
-const END_POINT = 'https://6ad6f6f1f71f154ac48786e0.mockapi.io/users';
+const END_POINT = 'https:// 6ad6f6f1f71f154ac48786e0.mockapi.io/users';
 
 const userCardInner = getNode('.user-card-inner');
 
