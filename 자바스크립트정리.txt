@@ -807,3 +807,26 @@ elem.nodeType == 9 – 문서 객체
 
 프로미스함수는 열거하기 때문에 콜백함수보다 가독성이 뛰어나다.
 프로미스 선언이후에는 then 함수를 사용
+
+
+10/20
+async 함수를 붙이면 promise 객체를 리턴하는 함수가 된다.
+async 함수는 무조건 Promise Object를 반환
+await : 1. promise result를 밖으로 꺼낼 수 있다.
+         2. 코드 실행 흐름 제어
+객체를 다시열거하려면 await을 사용해야함.
+
+(아무리 async 함수 내부에서 데이터를 이쁘게 가공해도.
+결국엔 반환할때 Promise 상자로 다시 포장해서 보내기 때문에.
+외부에서 무조건 await로 포장을 풀어야한다.)
+
+_target과 _targets 의 차이점
+
+
+사이트 참고 mockapi.io 
+
+버블링
+- 꼭 겹쳐있지 않아도 버블링이 발생합니다.
+- 구조가 같기떄문이다.
+
+- stopPropagation을 사용
