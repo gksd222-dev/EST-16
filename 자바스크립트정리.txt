@@ -830,3 +830,62 @@ _target과 _targets 의 차이점
 - 구조가 같기떄문이다.
 
 - stopPropagation을 사용
+
+
+10/30
+vite 한국어가 지원된다
+vue 프레임워크 ( 다만들어져있고 가져다가 쓴다.)
+React 라이브러리 ( 하나하나 만들어서 사용해야함)
+
+vite는 rollup esbuild 으로 돌아갔었다
+tree-shaking 기능이 탑재되어 있다. 
+안쓰이는 함수 등을 삭제해주는 것
+버전8로 넘어오면서 rolldown을 엔진으로 한다.
+rolldown은 rust 기반으로 만들어져있다.
+
+edge는 chrome의 인스톨러이다
+
+
+=========================
+1. vite 폴더에 gitignore 설치
+2. cs vite-manual
+3. npm init -y
+4. npm i vite
+5. npx vite (실행기능)
+==========================
+
+
+터미널에 노란색 문구가 뜨면 알아서 바꿔서 해준다는뜻이고,
+빨간색 문구는 도저히 그대로 할 수가 없다는 말이다
+
+개발 서버와 클라이언트 서버를 구분해줘야한다.
+package.json을 의
+  "scripts": {
+    "dev":"vite",
+    "build":"vite build",
+    "preview":"vite preview"
+  },
+등을 입력해줘서 입력 설정을 해야한다.
+
+개발용 서버 npm run dev
+
+빌드용도 npm run build
+
+html 열려면 프리뷰용도 프로덕션서버 npm run preview
+
+dist 폴더는 건들면 안된다
+
+npm run build를 하고 이후에 preview를 해서 체킹을 해야한다.
+최소 2일에 한번씩은 npm run build를 해줘라
+마지막 즈음에 build를 하면 모든 코드가 다 깨진다
+
+즉 디렉터리에 treeshaking 같은 기능이 적용되면 같이 따라오지 않는 파일이 다수 있다.
+-> 이미지 등이 프리뷰로 보면 안나온다.
+
+>>템플릿에 절대경로를 설정해주는 방법등이 있다
+
+// static assets import (정적 자산 불러오기)
+import visual from '/src/assets/visual.jpg'
+<img width="300 "src="${visual}" alt="">
+
+도구를 많이 학습을 하는데 늘 규칙을 지켜서 코드를 작성해줘야한다.
